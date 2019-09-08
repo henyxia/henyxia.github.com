@@ -1,23 +1,29 @@
 #!/bin/bash
 
 set -e
+set -x
 
-echo $GITHUB_AUTH_SECRET > ~/.git-credentials && chmod 0600 ~/.git-credentials
 git config --global credential.helper store
 git config --global user.email "henyxia-bot@users.noreply.github.com"
 git config --global user.name "Henyxia bot"
 git config --global push.default simple
 
-rm -rf deployment
-git clone -b master https://github.com/henyxia/henyxia.github.com deployment
+rm -rf deployment public
+mkdir deployment
 cd deployment
+git init
+git remote add origin https://henyxia-bot:$GITHUB_PASS@github.com/henyxia/henyxia.github.com.git
+git pull origin source
+git fetch
 hugo
 mv public ..
+git checkout master
+git reset --hard origin/master
 rm * -r
-mv ../public .
+mv ../public/* .
 git add -A
-git commit -m "rebuilding site on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}" || true
-git push
+git commit -m "buildbot @`date -Iseconds` SHA1=${TRAVIS_COMMIT} JOB=${TRAVIS_JOB_NUMBER}" || true
+git push -u origin master
 
 cd ..
-rm -rf source
+rm -rf deployment
