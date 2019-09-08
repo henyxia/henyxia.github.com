@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Projects list - henyxia&#39;s website
+          Managing soft RAID - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,23 +15,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Projects list" />
-<meta property="og:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://henyxia.github.io/projects/" />
+  <meta property="og:title" content="Managing soft RAID" />
+<meta property="og:description" content=" Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/notes/raid/" />
 
-<meta itemprop="name" content="Projects list">
-<meta itemprop="description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    ">
+<meta itemprop="name" content="Managing soft RAID">
+<meta itemprop="description" content=" Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  ">
 
+
+
+<meta itemprop="wordCount" content="71">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projects list"/>
-<meta name="twitter:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    "/>
+<meta name="twitter:title" content="Managing soft RAID"/>
+<meta name="twitter:description" content=" Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  "/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -56,8 +57,8 @@ if (!doNotTrack) {
 </head>
 <body><nav class="navbar is-transparent is-fixed-top is-info">
   <div class="navbar-brand">
-  <a class="navbar-item" href="https://henyxia.github.io/projects">
-      PROJECTS>
+  <a class="navbar-item" href="https://henyxia.github.io/notes">
+      NOTES>
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
@@ -69,7 +70,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Projects list
+        Managing soft RAID
       </div>
     </div>
   </div>
@@ -99,7 +100,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/projects/">Projects</a>
         
@@ -125,7 +126,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/">Notes</a>
         
@@ -232,7 +233,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/raid/">Soft RAID</a>
         
@@ -260,7 +261,54 @@ if (!doNotTrack) {
       <div class="content">
         <div class="content">
           
-	  <p>Well, well, well. This page is not written yet. Soon TM.</p>
+	  
+
+<h2 id="create-array">Create array</h2>
+
+<pre><code>mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY
+</code></pre>
+
+<h2 id="delete-array">Delete array</h2>
+
+<pre><code>mdadm --stop /dev/mdX
+mdadm --zero-superblock /dev/sdX
+mdadm --zero-superblock /dev/sdY
+</code></pre>
+
+<h2 id="add-disk-to-array">Add disk to array</h2>
+
+<pre><code>mdadm /dev/mdX --add /dev/sdX
+</code></pre>
+
+<h2 id="set-disk-as-faulty">Set disk as faulty</h2>
+
+<pre><code>mdadm /dev/mdX --fail /dev/sdX
+</code></pre>
+
+<h2 id="remove-disk-in-array">Remove disk in array</h2>
+
+<pre><code>mdadm /dev/mdX --remove /dev/sdX
+</code></pre>
+
+<h2 id="change-disk-quantity-in-array">Change disk quantity in array</h2>
+
+<pre><code>mdadm --grow /dev/mdX --raid-devices=X
+</code></pre>
+
+<h2 id="switch-to-rw">Switch to RW</h2>
+
+<pre><code>mdadm --readwrite /dev/mdX
+</code></pre>
+
+<h2 id="show-details-of-array">Show details of array</h2>
+
+<pre><code>mdadm --detail /dev/md0
+</code></pre>
+
+<h2 id="show-arrays-status">Show arrays status</h2>
+
+<pre><code>cat /proc/mdstat
+</code></pre>
 
         </div>
       </div>

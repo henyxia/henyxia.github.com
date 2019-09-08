@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Projects list - henyxia&#39;s website
+          IPMI basic commands - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,23 +15,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Projects list" />
-<meta property="og:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://henyxia.github.io/projects/" />
+  <meta property="og:title" content="IPMI basic commands" />
+<meta property="og:description" content="For all the following examples, the selected channel is 1. This may change depending of your system.
+Print LAN configuration ipmitool lan print
+Set static IP ipmitool lan set 1 ipsrc static ipmitool lan set 1 ipaddr 192.168.1.12 ipmitool lan set 1 netmask 255.255.255.0 ipmitool lan set 1 defgw ipaddr 192.168.1.1  Set dynamic IP ipmitool lan set 1 ipsrc DHCP
+Set VLAN ipmitool lan set 1 vlan id 12" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/notes/ipmi/basics/" />
 
-<meta itemprop="name" content="Projects list">
-<meta itemprop="description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    ">
+<meta itemprop="name" content="IPMI basic commands">
+<meta itemprop="description" content="For all the following examples, the selected channel is 1. This may change depending of your system.
+Print LAN configuration ipmitool lan print
+Set static IP ipmitool lan set 1 ipsrc static ipmitool lan set 1 ipaddr 192.168.1.12 ipmitool lan set 1 netmask 255.255.255.0 ipmitool lan set 1 defgw ipaddr 192.168.1.1  Set dynamic IP ipmitool lan set 1 ipsrc DHCP
+Set VLAN ipmitool lan set 1 vlan id 12">
 
+
+
+<meta itemprop="wordCount" content="173">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projects list"/>
-<meta name="twitter:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    "/>
+<meta name="twitter:title" content="IPMI basic commands"/>
+<meta name="twitter:description" content="For all the following examples, the selected channel is 1. This may change depending of your system.
+Print LAN configuration ipmitool lan print
+Set static IP ipmitool lan set 1 ipsrc static ipmitool lan set 1 ipaddr 192.168.1.12 ipmitool lan set 1 netmask 255.255.255.0 ipmitool lan set 1 defgw ipaddr 192.168.1.1  Set dynamic IP ipmitool lan set 1 ipsrc DHCP
+Set VLAN ipmitool lan set 1 vlan id 12"/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -56,8 +66,8 @@ if (!doNotTrack) {
 </head>
 <body><nav class="navbar is-transparent is-fixed-top is-info">
   <div class="navbar-brand">
-  <a class="navbar-item" href="https://henyxia.github.io/projects">
-      PROJECTS>
+  <a class="navbar-item" href="https://henyxia.github.io/notes">
+      NOTES>
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
@@ -69,7 +79,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Projects list
+        IPMI basic commands
       </div>
     </div>
   </div>
@@ -99,7 +109,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/projects/">Projects</a>
         
@@ -125,7 +135,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/">Notes</a>
         
@@ -190,7 +200,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">IPMI</p>
         
@@ -200,7 +210,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/ipmi/basics/">Basics</a>
         
@@ -260,7 +270,63 @@ if (!doNotTrack) {
       <div class="content">
         <div class="content">
           
-	  <p>Well, well, well. This page is not written yet. Soon TM.</p>
+	  
+
+<p>For all the following examples, the selected channel is 1. This may change
+depending of your system.</p>
+
+<h2 id="print-lan-configuration">Print LAN configuration</h2>
+
+<p><code>ipmitool lan print</code></p>
+
+<h2 id="set-static-ip">Set static IP</h2>
+
+<pre><code>ipmitool lan set 1 ipsrc static
+ipmitool lan set 1 ipaddr 192.168.1.12
+ipmitool lan set 1 netmask 255.255.255.0
+ipmitool lan set 1 defgw ipaddr 192.168.1.1
+</code></pre>
+
+<h2 id="set-dynamic-ip">Set dynamic IP</h2>
+
+<p><code>ipmitool lan set 1 ipsrc DHCP</code></p>
+
+<h2 id="set-vlan">Set VLAN</h2>
+
+<p><code>ipmitool lan set 1 vlan id 12</code></p>
+
+<h2 id="my-change-is-done-but-the-ipmi-is-not-applying-it">My change is done but the IPMI is not applying it!</h2>
+
+<p>On old systems, a reboot of the management controller (abreviated <code>mc</code>) needs
+to be rebooted in order to apply the new configuration.</p>
+
+<p><code>ipmitool mc reset cold</code></p>
+
+<p>Also, if the modification only impact VLAN settings, a simple raw command can
+do the trick (<a href="http://www.mail-archive.com/ipmitool-devel@lists.sourceforge.net/msg00095.html">source</a>).</p>
+
+<p><code>ipmitool raw 0x0c 1 1 0 0</code></p>
+
+<h2 id="set-a-user-pass">Set a user/pass</h2>
+
+<pre><code>ipmitool user set name $USER_ID $USERNAME
+ipmitool user set password $USER_ID $PASSWORD
+</code></pre>
+
+<h2 id="use-the-ipmi-remotely">Use the IPMI remotely</h2>
+
+<p>Just replace the <code>ipmitool</code> command with:
+<code>ipmitool -I lanplus -H $HOST_IP -U $USERNAME -P $PASSWORD</code></p>
+
+<hr />
+
+<p>References:</p>
+
+<ul>
+<li><a href="https://www.thomas-krenn.com/en/wiki/Configuring_IPMI_under_Linux_using_ipmitool">Thomas Krenn&rsquo;s website</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/linuxonibm/liabw/liabwresetDHCP.htm">IBM documentation</a></li>
+<li><a href="https://computercheese.blogspot.com/2013/12/ipmi-vlan-configuration.html">Computer cheese&rsquo;s blog</a></li>
+</ul>
 
         </div>
       </div>

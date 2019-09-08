@@ -5,18 +5,68 @@
     <link>https://henyxia.github.io/</link>
     <description>Recent content on henyxia&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://henyxia.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Projects</title>
-      <link>https://henyxia.github.io/projects/</link>
-      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      <title>IPMI basic commands</title>
+      <link>https://henyxia.github.io/notes/ipmi/basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://henyxia.github.io/projects/</guid>
-      <description>Well, well, well. This page is not redacted yet. Soon TM.</description>
+      <guid>https://henyxia.github.io/notes/ipmi/basics/</guid>
+      <description>For all the following examples, the selected channel is 1. This may change depending of your system.
+Print LAN configuration ipmitool lan print
+Set static IP ipmitool lan set 1 ipsrc static ipmitool lan set 1 ipaddr 192.168.1.12 ipmitool lan set 1 netmask 255.255.255.0 ipmitool lan set 1 defgw ipaddr 192.168.1.1  Set dynamic IP ipmitool lan set 1 ipsrc DHCP
+Set VLAN ipmitool lan set 1 vlan id 12</description>
+    </item>
+    
+    <item>
+      <title>Create a Ceph OSD</title>
+      <link>https://henyxia.github.io/notes/ceph/create-osd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/notes/ceph/create-osd/</guid>
+      <description>There are currently two backend storage available in Ceph (since Luminous): FileStore and Bluestore. According to ceph post write performance is almost two times faster on some use cases. Therefore, Bluestore seems to be the new recommended backend for all new installations.
+1 - On the new OSD We absolutely need to check that this new OSD have proper access to the ceph cluster. Run ceph -s and it must return the cluster health status.</description>
+    </item>
+    
+    <item>
+      <title>Remove a Ceph OSD</title>
+      <link>https://henyxia.github.io/notes/ceph/remove-osd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/notes/ceph/remove-osd/</guid>
+      <description>Preflight checklist  Connect on the OSD server and check ceph status ceph -s Removing an OSD is NOT recommended if the health is not HEALTH_OK Set the OSD_ID with export OSD_ID=X  Kick out the OSD  Remove the OSD with ceph osd out $OSD_ID Check the reweight (should be 0) with ceph osd tree  Shut off the OSD  Stop the OSD systemctl stop ceph-osd@${OSD_ID}.service Remove the associated service systemctl disable ceph-osd@${OSD_ID}.</description>
+    </item>
+    
+    <item>
+      <title>Enable IPMI kernel modules</title>
+      <link>https://henyxia.github.io/notes/ipmi/kernel-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/notes/ipmi/kernel-module/</guid>
+      <description>Once the ipmitool package is installed, it may still be unusable because of missing kernel modules. In order to load them, run:
+modprobe ipmi_devintf modprobe ipmi_si  Source: serverfault</description>
+    </item>
+    
+    <item>
+      <title>Managing soft RAID</title>
+      <link>https://henyxia.github.io/notes/raid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/notes/raid/</guid>
+      <description> Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  </description>
+    </item>
+    
+    <item>
+      <title>Tuning OSD</title>
+      <link>https://henyxia.github.io/notes/ceph/tuning-osd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/notes/ceph/tuning-osd/</guid>
+      <description>My OSD are getting OOM killed Sometimes, Ceph OSD use way more memory than expected. Most of the time, the thumb rule to apply is 1To of storage being equal to 1Go of memory. In some cases, like recovery or scrubbing, the rule does not work, resulting in a OOM kill in a memory restrained environment.
+When using bluestore, it is possible to reduce the memory used by OSD by tuning some particular settings through the admin socket of the OSD.</description>
     </item>
     
   </channel>

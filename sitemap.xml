@@ -3,17 +3,59 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://henyxia.github.io/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://henyxia.github.io/projects/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://henyxia.github.io/series/</loc>
+    <loc>https://henyxia.github.io/scholar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ipmi/basics/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ceph/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ceph/create-osd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ceph/remove-osd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ipmi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ipmi/kernel-module/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/raid/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/notes/ceph/tuning-osd/</loc>
   </url>
   
 </urlset>

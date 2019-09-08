@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Projects list - henyxia&#39;s website
+          Remove a Ceph OSD - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,23 +15,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Projects list" />
-<meta property="og:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://henyxia.github.io/projects/" />
+  <meta property="og:title" content="Remove a Ceph OSD" />
+<meta property="og:description" content="Preflight checklist  Connect on the OSD server and check ceph status ceph -s Removing an OSD is NOT recommended if the health is not HEALTH_OK Set the OSD_ID with export OSD_ID=X  Kick out the OSD  Remove the OSD with ceph osd out $OSD_ID Check the reweight (should be 0) with ceph osd tree  Shut off the OSD  Stop the OSD systemctl stop ceph-osd@${OSD_ID}.service Remove the associated service systemctl disable ceph-osd@${OSD_ID}." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/notes/ceph/remove-osd/" />
 
-<meta itemprop="name" content="Projects list">
-<meta itemprop="description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    ">
+<meta itemprop="name" content="Remove a Ceph OSD">
+<meta itemprop="description" content="Preflight checklist  Connect on the OSD server and check ceph status ceph -s Removing an OSD is NOT recommended if the health is not HEALTH_OK Set the OSD_ID with export OSD_ID=X  Kick out the OSD  Remove the OSD with ceph osd out $OSD_ID Check the reweight (should be 0) with ceph osd tree  Shut off the OSD  Stop the OSD systemctl stop ceph-osd@${OSD_ID}.service Remove the associated service systemctl disable ceph-osd@${OSD_ID}.">
 
+
+
+<meta itemprop="wordCount" content="155">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projects list"/>
-<meta name="twitter:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    "/>
+<meta name="twitter:title" content="Remove a Ceph OSD"/>
+<meta name="twitter:description" content="Preflight checklist  Connect on the OSD server and check ceph status ceph -s Removing an OSD is NOT recommended if the health is not HEALTH_OK Set the OSD_ID with export OSD_ID=X  Kick out the OSD  Remove the OSD with ceph osd out $OSD_ID Check the reweight (should be 0) with ceph osd tree  Shut off the OSD  Stop the OSD systemctl stop ceph-osd@${OSD_ID}.service Remove the associated service systemctl disable ceph-osd@${OSD_ID}."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -56,8 +57,8 @@ if (!doNotTrack) {
 </head>
 <body><nav class="navbar is-transparent is-fixed-top is-info">
   <div class="navbar-brand">
-  <a class="navbar-item" href="https://henyxia.github.io/projects">
-      PROJECTS>
+  <a class="navbar-item" href="https://henyxia.github.io/notes">
+      NOTES>
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
@@ -69,7 +70,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Projects list
+        Remove a Ceph OSD
       </div>
     </div>
   </div>
@@ -99,7 +100,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/projects/">Projects</a>
         
@@ -125,7 +126,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/">Notes</a>
         
@@ -135,7 +136,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">Ceph</p>
         
@@ -158,7 +159,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/ceph/remove-osd/">Deletion</a>
         
@@ -260,7 +261,48 @@ if (!doNotTrack) {
       <div class="content">
         <div class="content">
           
-	  <p>Well, well, well. This page is not written yet. Soon TM.</p>
+	  
+
+<h2 id="preflight-checklist">Preflight checklist</h2>
+
+<ul>
+<li>Connect on the OSD server and check ceph status <code>ceph -s</code></li>
+<li>Removing an OSD is NOT recommended if the health is not <code>HEALTH_OK</code></li>
+<li>Set the OSD_ID with <code>export OSD_ID=X</code></li>
+</ul>
+
+<h2 id="kick-out-the-osd">Kick out the OSD</h2>
+
+<ul>
+<li>Remove the OSD with <code>ceph osd out $OSD_ID</code></li>
+<li>Check the reweight (should be 0) with <code>ceph osd tree</code></li>
+</ul>
+
+<h2 id="shut-off-the-osd">Shut off the OSD</h2>
+
+<ul>
+<li>Stop the OSD <code>systemctl stop ceph-osd@${OSD_ID}.service</code></li>
+<li>Remove the associated service <code>systemctl disable ceph-osd@${OSD_ID}.service</code></li>
+</ul>
+
+<h2 id="remove-the-osd-from-the-crush-map">Remove the OSD from the CRUSH map</h2>
+
+<ul>
+<li>Remove the OSD from the CRUSH map with <code>ceph osd crush rm osd.$OSD_ID</code></li>
+<li>Check the removal with <code>ceph osd crush tree</code></li>
+</ul>
+
+<h2 id="remove-the-remaining-parts">Remove the remaining parts</h2>
+
+<ul>
+<li>Remove the OSD authentication part with <code>ceph auth del osd.$OSD_ID</code></li>
+<li>Check the key removal with <code>ceph auth list</code></li>
+<li>Remove the final data with <code>ceph osd rm $OSD_ID</code></li>
+<li>Remove the mount point (if any) in <code>/etc/fstab</code></li>
+<li>Remove the OSD mount point folder (if any) located in <code>/var/lib/ceph/osd/$CLUSTER-$ID</code></li>
+</ul>
+
+<p><em>The OSD should now be removed properly</em></p>
 
         </div>
       </div>
