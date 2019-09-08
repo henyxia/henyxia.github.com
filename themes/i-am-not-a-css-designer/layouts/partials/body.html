@@ -1,0 +1,28 @@
+{{- partial "navbar-top.html" . }}
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-2">
+    <div class="tile">
+      <div class="tile is-parent">
+        <article class="tile is-child notification">
+          {{- partial "navbar-left.html" . }}
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification has-background-grey-light">
+      <div class="content">
+        <div class="content">
+          <!-- Content -->
+	  {{ .Content }}
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

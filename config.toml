@@ -1,12 +1,9 @@
 baseurl = "https://henyxia.github.io/"
 title = "henyxia's website"
-theme = "pulp"
+theme = "i-am-not-a-css-designer"
 canonifyurls = true
 hasCJKLanguage = true
 googleAnalytics = "UA-146517157-1"
-
-[taxonomies]
-  series = "series"
 
 [params]
     author = "Jean Wasilewski"
@@ -21,37 +18,32 @@ googleAnalytics = "UA-146517157-1"
 [outputs]
     section = ["JSON", "HTML"]
 
-[[menu.main]]
+[[menu.shortlink]]
     identifier = "blog"
-    # name = "Projects"
     pre = "<i class='fa fa-book-open fa-lg'></i>" #Choose your favorite font from Font Awesome
     url = "/projects/"
     weight = 10
 
-[[menu.main]]
+[[menu.shortlink]]
     identifier = "github"
-    # name = "GitHub"
     pre = "<i class='fab fa-github fa-lg'></i>"
     url = "https://github.com/henyxia"
     weight = 20
 
-[[menu.main]]
+[[menu.shortlink]]
     identifier = "linkedin"
-    # name = "LinkedIn"
     pre = "<i class='fab fa-linkedin fa-lg'></i>"
     url = "https://www.linkedin.com/in/jeanwasilewski/"
     weight = 30
 
-[[menu.main]]
+[[menu.shortlink]]
     identifier = "email"
-    # name = "Email"
     pre = "<i class='fa fa-envelope fa-lg'></i>"
     url = "mailto:hire-me@revs0.com"
     weight = 40
 
-[[menu.main]]
+[[menu.shortlink]]
     identifier = "note"
-    # name = "Note"
     pre = "<i class='fa fa-sticky-note fa-lg'></i>"
-    url = "https://henyxia.github.io/notes"
-    weight = 40
+    url = "/notes/"
+    weight = 50
