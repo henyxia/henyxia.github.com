@@ -9,12 +9,13 @@ git config --global user.name "Henyxia bot"
 git config --global push.default simple
 
 rm -rf deployment
-git clone -b master https://github.com/henyxia.github.com source
-rsync -av --delete --exclude ".git" public/ source
-cd source
+git clone -b master https://github.com/henyxia/henyxia.github.com deployment
+cd deployment
+hugo
+mv public ..
+rm * -r
+mv ../public .
 git add -A
-# we need the || true, as sometimes you do not have any content changes
-# and git woundn't commit and you don't want to break the CI because of that
 git commit -m "rebuilding site on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}" || true
 git push
 
