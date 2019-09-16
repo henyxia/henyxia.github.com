@@ -10,6 +10,64 @@
     
     
     <item>
+      <title>Module presentation</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/00-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/00-intro/</guid>
+      <description>Module presentation Most of this module is taken from my teacher&amp;rsquo;s website (in French).
+Creating an Highly Available web application First, what is an highly available web application?
+Creating a &amp;lsquo;just available&amp;rsquo; web application Let&amp;rsquo;s start with a simplier design.</description>
+    </item>
+    
+    <item>
+      <title>Reminders</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/01-reminders/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/01-reminders/</guid>
+      <description>System administration, network and virtualization introduction What is a DNS nameserver? What is TCP/IP?  source: Wikipedia
+  source: Wikipedia
+ Some widely used ports  80 HTTP 443 HTTPS 53 DNS
+ 22 SSH
+ 123 NTP
+ 25 SMTP
+  What is Apache 2? |||v
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;My awesome website&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Awesome! It works! &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  |||</description>
+    </item>
+    
+    <item>
+      <title>Network commands</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/02-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/02-network/</guid>
+      <description>Let&amp;rsquo;s do some network! YAY! Network cards and MACs List interfaces root@my-server:~# ip link show 1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: eno1: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff 3: eno2: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff  Start an interface ip link set eno1 up  Change a MAC address ip link set eno1 address 00:11:22:33:44:55  Network cards and IPs List IPs root@my-server:~# ip address show 1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.</description>
+    </item>
+    
+    <item>
+      <title>VLAN definition</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/03-vlan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/03-vlan/</guid>
+      <description> What is a VLAN? |||v
+Why VLAN?  Local Area Network (LAN) security limitations Inefficient cost with scale  Virtual Local Area Network  Defined by two RFCs: IEEE 802.1q and IEEE 802.3ac Allow seperated LAN inside the same media All communication between VLANs go through a router  |||
+ Source: Wikipedia
+ </description>
+    </item>
+    
+    <item>
+      <title>Cisco presentation</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/04-cisco/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/04-cisco/</guid>
+      <description>Now let&amp;rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z.</description>
+    </item>
+    
+    <item>
       <title>IPMI basic commands</title>
       <link>https://henyxia.github.io/notes/ipmi/basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

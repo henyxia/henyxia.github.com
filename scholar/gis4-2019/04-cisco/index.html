@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html><head>
+  <title>
+      
+          Cisco presentation - henyxia&#39;s website
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jean Wasilewski" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://henyxia.github.io/img/favicon.ico">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <meta property="og:title" content="Cisco presentation" />
+<meta property="og:description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/04-cisco/" />
+
+<meta itemprop="name" content="Cisco presentation">
+<meta itemprop="description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z.">
+
+
+
+<meta itemprop="wordCount" content="490">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cisco presentation"/>
+<meta name="twitter:description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z."/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-146517157-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+<body><nav class="navbar is-transparent is-fixed-top is-info">
+  <div class="navbar-brand">
+  <a class="navbar-item" href="https://henyxia.github.io/scholar">
+      SCHOLAR>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item" href="https://bulma.io/">
+        Cisco presentation
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-2">
+    <div class="tile">
+      <div class="tile is-parent">
+        <article class="tile is-child notification"><aside class="menu">
+  <p class="menu-label">
+    Menu
+  </p>
+
+
+
+<ul class="menu-list">
+  
+  
+    
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/projects/">Projects</a>
+        
+      </li>
+    
+  
+
+  
+    
+  
+  
+    
+      <li class="active">
+        
+        <a href="https://henyxia.github.io/scholar/">Scholar</a>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="active">
+        
+        <p class="menu-label">GIS4 - 2019</p>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/00-intro/">Presentation</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/01-reminders/">Reminders</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/02-network/">Network commands</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/03-vlan/">VLAN definition</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="active">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/04-cisco/">Cisco presentation</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+  
+    
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/">Notes</a>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <p class="menu-label">Ceph</p>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ceph/create-osd/">Creation</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ceph/remove-osd/">Deletion</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ceph/tuning-osd/">Tuning</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <p class="menu-label">IPMI</p>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ipmi/basics/">Basics</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ipmi/kernel-module/">kernel modules</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/raid/">Soft RAID</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+  
+</ul>
+
+</aside>
+
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification has-background-grey-light">
+      <div class="content">
+        <div class="content">
+          
+	  
+
+<h1 id="now-let-s-do-this-on-real-equipments">Now let&rsquo;s do this on real equipments!</h1>
+
+<hr />
+
+<h1 id="network-equipments">Network equipments</h1>
+
+<h3 id="definition">Definition</h3>
+
+<ul>
+<li>Like a desktop computer, but with signigicant differences</li>
+<li>CPUs with lower capacity</li>
+<li>Some dedicated chips to handle data flows</li>
+<li>Specific operating systems (Cisco IOS)</li>
+<li>No screens, no USB but a lot of ports</li>
+<li>Configurable via serial or SSH</li>
+</ul>
+
+<hr />
+
+<h1 id="some-basics">Some basics</h1>
+
+<p>With an example:</p>
+
+<pre><code>my-server$ ssh admin@router
+Password:
+router&gt;enable
+Password:
+router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#exit
+router#write
+Building configuration...
+[OK]
+router#reload
+Proceed with reload? [confirm]
+</code></pre>
+
+<hr />
+
+<h1 id="some-basics-1">Some basics</h1>
+
+<p>Setting a password:</p>
+
+<pre><code>router&gt;enable
+router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#enable password glopglop
+router(config)#exit
+router#write
+Building configuration...
+[OK]
+router#reload
+Proceed with reload? [confirm]
+</code></pre>
+
+<p>See the running configuration:</p>
+
+<pre><code>router&gt;show running-config
+</code></pre>
+
+<p>Setting a cyphered password</p>
+
+<pre><code>router(config)#enable secret glopglop
+</code></pre>
+
+<hr />
+
+<h1 id="some-basics-2">Some basics</h1>
+
+<p>Setting a password for SSH:</p>
+
+<pre><code>router&gt;enable
+router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z
+router(config)#hostname router
+router(config)#aaa new-model
+router(config)#username admin privilege 15 password glopglop
+router(config)#! ou pour plus de sécurité :
+router(config)#username admin privilege 15 secret glopglop
+router(config)#ip domain-name deule.net
+router(config)#crypto key generate rsa
+router(config)#line vty 0 15
+router(config-line)#transport input ssh
+router(config-line)#exit
+router(config)#exit
+</code></pre>
+
+<hr />
+
+<h1 id="some-basics-3">Some basics</h1>
+
+<p>Listing interfaces</p>
+
+<pre><code>router&gt;show interfaces summary
+*: interface is up
+IHQ: pkts in input hold queue     IQD: pkts dropped from input queue
+OHQ: pkts in output hold queue    OQD: pkts dropped from output queue
+RXBS: rx rate (bits/sec)          RXPS: rx rate (pkts/sec)
+TXBS: tx rate (bits/sec)          TXPS: tx rate (pkts/sec)
+TRTL: throttle count
+
+ Interface                   IHQ       IQD       OHQ       OQD      RXBS      RXPS      TXBS      TXPS      TRTL
+----------------------------------------------------------------------------------------------------------------
+ FastEthernet1                 0         0         0         0         0         0         0         0         0
+ TenGigabitEthernet1/1         0         0         0         0  22673000     37912 2758660000    228470         0
+ TenGigabitEthernet1/2         0         0         0   2276353  44854000      7409  29491000      6402         0
+ TenGigabitEthernet1/3         0         0         0         0 145019000     17745  15431000     10343         0
+...
+</code></pre>
+
+<hr />
+
+<h1 id="some-basics-4">Some basics</h1>
+
+<p>Show running configuration of an interfaces</p>
+
+<pre><code>router#show running-config interface TenGigabitEthernet1/19
+Building configuration...
+
+Current configuration : 169 bytes
+!
+interface TenGigabitEthernet1/19
+ description baie B12
+ switchport trunk native vlan 464
+ switchport trunk allowed vlan 262,263,278,463,464,762,763
+ switchport mode trunk
+end
+</code></pre>
+
+<hr />
+
+<h1 id="router-configuration">Router configuration</h1>
+
+<p>Let&rsquo;s assign an IP in our router:</p>
+
+<pre><code>router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#interface GigabitEthernet0/1
+router(config-if)#ip address 192.168.0.1 255.255.255.0
+router(config-if)#exit
+router(config)#exit
+</code></pre>
+
+<p>And start its routing:</p>
+
+<pre><code>router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#ip routing
+router(config)#exit
+router#show ip route
+</code></pre>
+
+<hr />
+
+<h1 id="router-configuration-1">Router configuration</h1>
+
+<p>Let&rsquo;s assign a new VLAN!</p>
+
+<h3 id="method-1-sub-interfaces">Method 1: sub interfaces</h3>
+
+<pre><code>router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#interface GigabitEthernet0/1.2
+router(config-subif)#encapsulation dot1Q 2
+router(config-subif)#ip address 192.168.2.1 255.255.255.0
+router(config-subif)#exit
+router(config)#exit
+</code></pre>
+
+<h3 id="method-2-vlan-interfaces">Method 2: VLAN interfaces</h3>
+
+<pre><code>router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+router(config)#interface vlan2
+router(config-if)#ip address 192.168.2.1 255.255.255.0
+router(config-if)#exit
+router(config)#exit
+</code></pre>
+
+<hr />
+
+<h1 id="switch-configuration">Switch configuration</h1>
+
+<p>Let&rsquo;s assign a new VLAN!</p>
+
+<h3 id="access-mode">access mode</h3>
+
+<pre><code>switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+switch(config)#interface gigabitEthernet0/7
+switch(config-if)#switchport mode access
+switch(config-if)#switchport access vlan 2
+switch(config-if)#exit
+</code></pre>
+
+<h3 id="trunk-mode">trunk mode</h3>
+
+<pre><code>switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+switch(config)#interface fastEthernet0/1
+switch(config-if)#switchport mode trunk
+switch(config-if)#switchport trunk allowed vlan 262,464,762
+switch(config-if)#switchport trunk native vlan 264
+switch(config-if)#exit
+</code></pre>
+
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+  </body>
+</html>

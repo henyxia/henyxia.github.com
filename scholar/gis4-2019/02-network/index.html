@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html><head>
+  <title>
+      
+          Network commands - henyxia&#39;s website
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jean Wasilewski" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://henyxia.github.io/img/favicon.ico">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <meta property="og:title" content="Network commands" />
+<meta property="og:description" content="Let&rsquo;s do some network! YAY! Network cards and MACs List interfaces root@my-server:~# ip link show 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff 3: eno2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff  Start an interface ip link set eno1 up  Change a MAC address ip link set eno1 address 00:11:22:33:44:55  Network cards and IPs List IPs root@my-server:~# ip address show 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/02-network/" />
+
+<meta itemprop="name" content="Network commands">
+<meta itemprop="description" content="Let&rsquo;s do some network! YAY! Network cards and MACs List interfaces root@my-server:~# ip link show 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff 3: eno2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff  Start an interface ip link set eno1 up  Change a MAC address ip link set eno1 address 00:11:22:33:44:55  Network cards and IPs List IPs root@my-server:~# ip address show 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.">
+
+
+
+<meta itemprop="wordCount" content="459">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Network commands"/>
+<meta name="twitter:description" content="Let&rsquo;s do some network! YAY! Network cards and MACs List interfaces root@my-server:~# ip link show 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff 3: eno2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff  Start an interface ip link set eno1 up  Change a MAC address ip link set eno1 address 00:11:22:33:44:55  Network cards and IPs List IPs root@my-server:~# ip address show 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127."/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-146517157-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+<body><nav class="navbar is-transparent is-fixed-top is-info">
+  <div class="navbar-brand">
+  <a class="navbar-item" href="https://henyxia.github.io/scholar">
+      SCHOLAR>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item" href="https://bulma.io/">
+        Network commands
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-2">
+    <div class="tile">
+      <div class="tile is-parent">
+        <article class="tile is-child notification"><aside class="menu">
+  <p class="menu-label">
+    Menu
+  </p>
+
+
+
+<ul class="menu-list">
+  
+  
+    
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/projects/">Projects</a>
+        
+      </li>
+    
+  
+
+  
+    
+  
+  
+    
+      <li class="active">
+        
+        <a href="https://henyxia.github.io/scholar/">Scholar</a>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="active">
+        
+        <p class="menu-label">GIS4 - 2019</p>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/00-intro/">Presentation</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/01-reminders/">Reminders</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="active">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/02-network/">Network commands</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/03-vlan/">VLAN definition</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/04-cisco/">Cisco presentation</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+  
+    
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/">Notes</a>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <p class="menu-label">Ceph</p>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ceph/create-osd/">Creation</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ceph/remove-osd/">Deletion</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ceph/tuning-osd/">Tuning</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <p class="menu-label">IPMI</p>
+        
+        <ul class="sub-menu">
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ipmi/basics/">Basics</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/ipmi/kernel-module/">kernel modules</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/notes/raid/">Soft RAID</a>
+        
+      </li>
+    
+  
+
+          
+        </ul>
+      </li>
+    
+  
+
+  
+</ul>
+
+</aside>
+
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification has-background-grey-light">
+      <div class="content">
+        <div class="content">
+          
+	  
+
+<h1 id="let-s-do-some-network-yay">Let&rsquo;s do some network! YAY!</h1>
+
+<hr />
+
+<h1 id="network-cards-and-macs">Network cards and MACs</h1>
+
+<h3 id="list-interfaces">List interfaces</h3>
+
+<pre><code class="language-bash">root@my-server:~# ip link show
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff
+3: eno2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff
+</code></pre>
+
+<h3 id="start-an-interface">Start an interface</h3>
+
+<pre><code class="language-bash">ip link set eno1 up
+</code></pre>
+
+<h3 id="change-a-mac-address">Change a MAC address</h3>
+
+<pre><code class="language-bash">ip link set eno1 address 00:11:22:33:44:55
+</code></pre>
+
+<hr />
+
+<h1 id="network-cards-and-ips">Network cards and IPs</h1>
+
+<h3 id="list-ips">List IPs</h3>
+
+<pre><code class="language-bash">root@my-server:~# ip address show
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff
+    inet 163.172.67.112/24 brd 163.172.67.255 scope global eno1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::ec4:7aff:fe84:5d3e/64 scope link
+       valid_lft forever preferred_lft forever
+3: eno2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff
+</code></pre>
+
+<h3 id="add-an-ip">Add an IP</h3>
+
+<pre><code class="language-bash">ip address add dev eno2 192.168.0.42/24
+</code></pre>
+
+<h3 id="remove-an-ip">Remove an IP</h3>
+
+<pre><code class="language-bash">ip address del dev eno2 192.168.0.42/24
+</code></pre>
+
+<hr />
+
+<h1 id="network-cards-and-ips-1">Network cards and IPs</h1>
+
+<h3 id="list-neighbors">List neighbors</h3>
+
+<pre><code class="language-bash">root@my-server:~# ip neighbour show |tail -n20
+163.172.67.239 dev eno1 lladdr 0c:c4:7a:84:5f:88 STALE
+163.172.67.157 dev eno1 lladdr 0c:c4:7a:84:5f:78 STALE
+163.172.67.8 dev eno1 lladdr 0c:c4:7a:84:5f:36 STALE
+163.172.67.167 dev eno1 lladdr 0c:c4:7a:84:5d:cc STALE
+163.172.67.91 dev eno1 lladdr 0c:c4:7a:84:7f:f6 STALE
+163.172.67.192 dev eno1 lladdr 0c:c4:7a:84:5f:9e STALE
+163.172.67.246 dev eno1 lladdr 0c:c4:7a:84:7c:b0 STALE
+163.172.67.73 dev eno1 lladdr 0c:c4:7a:84:5c:cc STALE
+163.172.67.127 dev eno1 lladdr 0c:c4:7a:84:7d:da STALE
+163.172.67.152 dev eno1 lladdr 0c:c4:7a:84:7e:30 STALE
+163.172.67.142 dev eno1 lladdr 0c:c4:7a:84:5d:2a STALE
+163.172.67.1 dev eno1 lladdr 58:ac:78:b1:1d:cd DELAY
+163.172.67.162 dev eno1 lladdr 0c:c4:7a:84:5d:8e STALE
+163.172.67.80 dev eno1 lladdr 0c:c4:7a:84:7c:f0 STALE
+163.172.67.207 dev eno1 lladdr 0c:c4:7a:84:7d:46 STALE
+163.172.67.253 dev eno1 lladdr 0c:c4:7a:84:5d:c8 STALE
+163.172.67.104 dev eno1 lladdr 0c:c4:7a:84:7e:90 STALE
+163.172.67.30 dev eno1 lladdr 0c:c4:7a:84:61:0e STALE
+163.172.67.145 dev eno1 lladdr 0c:c4:7a:84:5d:3c STALE
+</code></pre>
+
+<h3 id="delete-neighbor-entry">Delete neighbor entry</h3>
+
+<pre><code class="language-bash">ip neighbour del 163.172.67.253 dev eno1
+</code></pre>
+
+<hr />
+
+<h1 id="network-cards-and-routes">Network cards and routes</h1>
+
+<h3 id="list-routes">List routes</h3>
+
+<pre><code class="language-bash">root@my-server:~# ip route show
+default via 163.172.67.1 dev eno1
+163.172.67.0/24 dev eno1 proto kernel scope link src 163.172.67.112
+</code></pre>
+
+<h3 id="add-route">Add route</h3>
+
+<pre><code class="language-bash">ip route add 192.168.0.0/24 dev eno2
+ip route add 192.168.100.0/24 via 192.168.0.1
+ip route add default via 192.168.0.254
+</code></pre>
+
+<h3 id="remove-route">Remove route</h3>
+
+<pre><code class="language-bash">ip route del 192.168.100.0/24
+</code></pre>
+
+<hr />
+
+<h1 id="network-cards-and-persistence">Network cards and persistence</h1>
+
+<p>(Under Debian-based operating systems)</p>
+
+<h3 id="network-manager">network-manager</h3>
+
+<ul>
+<li>an helper for beginners</li>
+<li>will mostly conflict with our objectives</li>
+<li>not on any production grave server</li>
+</ul>
+
+<h3 id="networking">networking</h3>
+
+<p><code>/etc/network/interfaces</code></p>
+
+<pre><code class="language-bash">source /etc/network/interfaces.d/*
+
+auto lo
+iface lo inet loopback
+</code></pre>
+
+<p><code>/etc/network/interfaces/eno1</code></p>
+
+<pre><code class="language-bash">allow-hotplug eno1
+iface eno1 inet dhcp
+</code></pre>
+
+<p><code>/etc/network/interfaces/eno2</code></p>
+
+<pre><code class="language-bash">allow-hotplug eno1
+iface eno1 inet static
+  address 192.168.0.10
+  netmask 255.255.255.0
+  gateway 192.168.0.254
+</code></pre>
+
+<hr />
+
+<h1 id="resolving-domains">Resolving domains</h1>
+
+<p>Configuration file available in <code>/etc/resolv.conf</code></p>
+
+<pre><code>root@my-server:~# cat /etc/resolv.conf
+nameserver 62.210.16.6
+nameserver 62.210.16.7
+</code></pre>
+
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+  </body>
+</html>
