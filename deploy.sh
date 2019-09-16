@@ -21,6 +21,7 @@ git checkout master
 git reset --hard origin/master
 rm * -r
 mv ../public/* .
+mv ../public/.well-known .
 git add -A
 git commit -m "buildbot @`date -Iseconds` SHA1=${TRAVIS_COMMIT} JOB=${TRAVIS_JOB_NUMBER}" || true
 git push -u origin master
