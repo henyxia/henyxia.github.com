@@ -1,0 +1,189 @@
+---
+title: Network commands
+weight: 30
+menu:
+  main:
+    parent:
+      GIS4 - 2019
+---
+
+# Let's do some network! YAY!
+
+---
+
+Network cards and MACs
+===
+
+### List interfaces
+
+~~~bash
+root@my-server:~# ip link show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eno1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff
+3: eno2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff
+~~~
+
+### Start an interface
+
+~~~bash
+ip link set eno1 up
+~~~
+
+### Change a MAC address
+
+~~~bash
+ip link set eno1 address 00:11:22:33:44:55
+~~~
+
+---
+
+Network cards and IPs
+===
+
+### List IPs
+
+~~~bash
+root@my-server:~# ip address show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eno1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff
+    inet 163.172.67.112/24 brd 163.172.67.255 scope global eno1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::ec4:7aff:fe84:5d3e/64 scope link
+       valid_lft forever preferred_lft forever
+3: eno2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff
+~~~
+
+### Add an IP
+
+~~~bash
+ip address add dev eno2 192.168.0.42/24
+~~~
+
+### Remove an IP
+
+~~~bash
+ip address del dev eno2 192.168.0.42/24
+~~~
+---
+Network cards and IPs
+===
+
+### List neighbors
+
+~~~bash
+root@my-server:~# ip neighbour show |tail -n20
+163.172.67.239 dev eno1 lladdr 0c:c4:7a:84:5f:88 STALE
+163.172.67.157 dev eno1 lladdr 0c:c4:7a:84:5f:78 STALE
+163.172.67.8 dev eno1 lladdr 0c:c4:7a:84:5f:36 STALE
+163.172.67.167 dev eno1 lladdr 0c:c4:7a:84:5d:cc STALE
+163.172.67.91 dev eno1 lladdr 0c:c4:7a:84:7f:f6 STALE
+163.172.67.192 dev eno1 lladdr 0c:c4:7a:84:5f:9e STALE
+163.172.67.246 dev eno1 lladdr 0c:c4:7a:84:7c:b0 STALE
+163.172.67.73 dev eno1 lladdr 0c:c4:7a:84:5c:cc STALE
+163.172.67.127 dev eno1 lladdr 0c:c4:7a:84:7d:da STALE
+163.172.67.152 dev eno1 lladdr 0c:c4:7a:84:7e:30 STALE
+163.172.67.142 dev eno1 lladdr 0c:c4:7a:84:5d:2a STALE
+163.172.67.1 dev eno1 lladdr 58:ac:78:b1:1d:cd DELAY
+163.172.67.162 dev eno1 lladdr 0c:c4:7a:84:5d:8e STALE
+163.172.67.80 dev eno1 lladdr 0c:c4:7a:84:7c:f0 STALE
+163.172.67.207 dev eno1 lladdr 0c:c4:7a:84:7d:46 STALE
+163.172.67.253 dev eno1 lladdr 0c:c4:7a:84:5d:c8 STALE
+163.172.67.104 dev eno1 lladdr 0c:c4:7a:84:7e:90 STALE
+163.172.67.30 dev eno1 lladdr 0c:c4:7a:84:61:0e STALE
+163.172.67.145 dev eno1 lladdr 0c:c4:7a:84:5d:3c STALE
+~~~
+
+### Delete neighbor entry
+
+~~~bash
+ip neighbour del 163.172.67.253 dev eno1
+~~~
+
+---
+
+Network cards and routes
+===
+
+### List routes
+
+~~~bash
+root@my-server:~# ip route show
+default via 163.172.67.1 dev eno1
+163.172.67.0/24 dev eno1 proto kernel scope link src 163.172.67.112
+~~~
+
+### Add route
+
+~~~bash
+ip route add 192.168.0.0/24 dev eno2
+ip route add 192.168.100.0/24 via 192.168.0.1
+ip route add default via 192.168.0.254
+~~~
+
+### Remove route
+
+~~~bash
+ip route del 192.168.100.0/24
+~~~
+
+---
+
+Network cards and persistence
+===
+
+(Under Debian-based operating systems)
+
+### network-manager
+
+* an helper for beginners
+* will mostly conflict with our objectives
+* not on any production grave server
+
+### networking
+
+`/etc/network/interfaces`
+
+~~~bash
+source /etc/network/interfaces.d/*
+
+auto lo
+iface lo inet loopback
+~~~
+
+`/etc/network/interfaces/eno1`
+~~~bash
+allow-hotplug eno1
+iface eno1 inet dhcp
+~~~
+
+`/etc/network/interfaces/eno2`
+~~~bash
+allow-hotplug eno1
+iface eno1 inet static
+  address 192.168.0.10
+  netmask 255.255.255.0
+  gateway 192.168.0.254
+~~~
+
+---
+
+Resolving domains
+===
+
+Configuration file available in `/etc/resolv.conf`
+
+```
+root@my-server:~# cat /etc/resolv.conf
+nameserver 62.210.16.6
+nameserver 62.210.16.7
+```
