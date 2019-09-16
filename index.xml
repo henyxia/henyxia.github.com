@@ -26,8 +26,8 @@ Creating a &amp;lsquo;just available&amp;rsquo; web application Let&amp;rsquo;s 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/01-reminders/</guid>
-      <description>System administration, network and virtualization introduction What is a DNS nameserver? What is TCP/IP?  source: Wikipedia
-  source: Wikipedia
+      <description>System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
+ What is a DNS nameserver?  source: Wikipedia
  Some widely used ports  80 HTTP 443 HTTPS 53 DNS
  22 SSH
  123 NTP
@@ -65,6 +65,15 @@ Why VLAN?  Local Area Network (LAN) security limitations Inefficient cost with s
       <guid>https://henyxia.github.io/scholar/gis4-2019/04-cisco/</guid>
       <description>Now let&amp;rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
 my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z.</description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/10-tutorials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/10-tutorials/</guid>
+      <description>Tutorials Introduction Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Final exam notation  The final exam will be a written test It will contain everything seen during course and tutorials It will account for 50% of your final score  Final score Your final score will be composed of:</description>
     </item>
     
     <item>
