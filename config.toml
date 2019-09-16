@@ -25,6 +25,12 @@ googleAnalytics = "UA-146517157-1"
     weight = 10
 
 [[menu.shortlink]]
+    identifier = "scholar"
+    pre = "<i class='fas fa-graduation-cap fa-lg'></i>"
+    url = "/scholar/"
+    weight = 15
+
+[[menu.shortlink]]
     identifier = "github"
     pre = "<i class='fab fa-github fa-lg'></i>"
     url = "https://github.com/henyxia"

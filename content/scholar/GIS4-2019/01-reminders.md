@@ -58,7 +58,3 @@ What is Apache 2?
 |||
 
 ![Apache 2 render example](/apache2-render.png)
-
----
-
-
