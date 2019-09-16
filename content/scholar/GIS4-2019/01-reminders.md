@@ -10,9 +10,6 @@ menu:
 System administration, network and virtualization introduction
 ---
 
-What is a DNS nameserver?
-===
-
 What is TCP/IP?
 ===
 
@@ -21,6 +18,9 @@ What is TCP/IP?
 > source: Wikipedia
 
 ---
+
+What is a DNS nameserver?
+===
 
 ![DNS resolution example](/dns-resolve.png)
 
