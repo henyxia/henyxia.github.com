@@ -94,6 +94,7 @@ Tutorial 5
 ### 1 point
 
 * Install [Nomad](https://www.nomadproject.io/)
+* Use it as a single master and client node ([some doc here](https://www.nomadproject.io/intro/getting-started/running.html))
 
 ---
 

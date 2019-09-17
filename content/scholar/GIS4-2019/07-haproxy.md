@@ -1,0 +1,150 @@
+---
+title: HAProxy
+weight: 80
+menu:
+  main:
+    parent:
+      GIS4 - 2019
+---
+
+What is HAProxy?
+===
+
+* Load balancer written in C
+* Available on most Unix distributions
+* Allow to balance traffic and avoid downtime in case of failures
+
+---
+
+HAProxy configuration file
+===
+
+* Located in `/etc/haproxy/haproxy.conf`
+* Can be checked with `haproxy -c -f /etc/haproxy/haproxy.cfg`
+* Restart to apply new configuration with `service haproxy restart`
+
+---
+
+HAProxy configuration
+===
+
+### `global` bloc
+
+```
+global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
+
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
+
+        # Default ciphers to use on SSL-enabled listening sockets.
+        # For more information, see ciphers(1SSL).
+        ssl-default-bind-ciphers kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL
+```
+
+---
+
+HAProxy configuration
+===
+
+### `defaults` bloc
+
+```
+defaults
+        log     global
+        mode    http
+        option  httplog
+        option  dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+        errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+```
+
+---
+
+HAProxy configuration
+===
+
+### `frontend` bloc
+
+```
+frontend localnodes
+    bind *:80
+    mode http
+    default_backend nodes
+
+    acl is_other_site hdr(host) -i www.my-other-site.com
+    use_backend nodes2 if is_other_site
+```
+
+---
+
+HAProxy configuration
+===
+
+### `backend` bloc
+
+```
+backend nodes
+    mode http
+    balance roundrobin
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    server web01 127.0.0.1:9000 check
+    server web02 127.0.0.1:9001 check
+    server web03 127.0.0.1:9002 check
+
+backend nodes2
+    mode http
+    balance roundrobin
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    default-server inter 2s fall 3 rise 2
+    server-template nodes 3 _website2._http.service.consul check resolvers my-resolvers resolve-opts allow-dup-ip resolve-prefer ipv4
+```
+
+---
+
+HAProxy configuration
+===
+
+### `listen` bloc
+
+```
+listen stats *:1936
+    stats enable
+    stats uri /
+    stats show-node
+    stats show-desc
+    stats show-legends
+    stats auth someuser:password
+```
+
+---
+
+HAProxy configuration
+===
+
+### `resolvers` bloc
+
+```
+resolvers my-resolvers
+    nameserver consul01 127.0.0.1:8600
+    resolve_retries 30
+    timeout retry 2s
+    hold valid 5s
+    accepted_payload_size 8192
+```
