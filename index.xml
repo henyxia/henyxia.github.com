@@ -68,6 +68,51 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
     </item>
     
     <item>
+      <title>Sys admin</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/05-system-administration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/05-system-administration/</guid>
+      <description>System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded.</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/06-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/06-docker/</guid>
+      <description>System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded.</description>
+    </item>
+    
+    <item>
+      <title>HAProxy</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/07-haproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/07-haproxy/</guid>
+      <description>What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failures  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets.</description>
+    </item>
+    
+    <item>
+      <title>Nomad</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/08-nomad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/08-nomad/</guid>
+      <description>What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: masters and clients Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:</description>
+    </item>
+    
+    <item>
+      <title>Consul</title>
+      <link>https://henyxia.github.io/scholar/gis4-2019/09-consul/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2019/09-consul/</guid>
+      <description>What is Consul?  Lightweight K/V service registry tool written in Go by HashiCorp Available on most Unix distributions Allow to register service and key  Consul example Consul and DNS $ dig @127.0.0.1 -p 8600 _my-webapp._web.service.consul SRV ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.11.5-P4-5.1-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; @10.41.7.83 -p 8600 _my-webapp._web.service.consul SRV ; (1 server found) ;; global options: +cmd ;; Got answer: ;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 51598 ;; flags: qr aa rd; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 9 ;; WARNING: recursion requested but not available ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 4096 ;; QUESTION SECTION: ;_my-webapp.</description>
+    </item>
+    
+    <item>
       <title>Tutorials</title>
       <link>https://henyxia.github.io/scholar/gis4-2019/10-tutorials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

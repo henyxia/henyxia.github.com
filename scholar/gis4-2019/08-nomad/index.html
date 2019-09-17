@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Reminders - henyxia&#39;s website
+          Nomad - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,45 +15,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Reminders" />
-<meta property="og:description" content="System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
- What is a DNS nameserver?  source: Wikipedia
- Some widely used ports  80 HTTP 443 HTTPS 53 DNS
- 22 SSH
- 123 NTP
- 25 SMTP
-  What is Apache 2? |||v
-&lt;html&gt; &lt;head&gt; &lt;title&gt;My awesome website&lt;/title&gt; &lt;/head&gt; &lt;body&gt; Awesome! It works! &lt;/body&gt; &lt;/html&gt;  |||" />
+  <meta property="og:title" content="Nomad" />
+<meta property="og:description" content="What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: masters and clients Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/01-reminders/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/08-nomad/" />
 
-<meta itemprop="name" content="Reminders">
-<meta itemprop="description" content="System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
- What is a DNS nameserver?  source: Wikipedia
- Some widely used ports  80 HTTP 443 HTTPS 53 DNS
- 22 SSH
- 123 NTP
- 25 SMTP
-  What is Apache 2? |||v
-&lt;html&gt; &lt;head&gt; &lt;title&gt;My awesome website&lt;/title&gt; &lt;/head&gt; &lt;body&gt; Awesome! It works! &lt;/body&gt; &lt;/html&gt;  |||">
+<meta itemprop="name" content="Nomad">
+<meta itemprop="description" content="What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: masters and clients Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:">
 
 
 
-<meta itemprop="wordCount" content="52">
+<meta itemprop="wordCount" content="198">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Reminders"/>
-<meta name="twitter:description" content="System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
- What is a DNS nameserver?  source: Wikipedia
- Some widely used ports  80 HTTP 443 HTTPS 53 DNS
- 22 SSH
- 123 NTP
- 25 SMTP
-  What is Apache 2? |||v
-&lt;html&gt; &lt;head&gt; &lt;title&gt;My awesome website&lt;/title&gt; &lt;/head&gt; &lt;body&gt; Awesome! It works! &lt;/body&gt; &lt;/html&gt;  |||"/>
+<meta name="twitter:title" content="Nomad"/>
+<meta name="twitter:description" content="What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: masters and clients Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:"/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -91,7 +70,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Reminders
+        Nomad
       </div>
     </div>
   </div>
@@ -167,7 +146,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/01-reminders/">Reminders</a>
         
@@ -258,7 +237,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/08-nomad/">Nomad</a>
         
@@ -446,60 +425,102 @@ if (!doNotTrack) {
           
 	  
 
-<h2 id="system-administration-network-and-virtualization-introduction">System administration, network and virtualization introduction</h2>
-
-<h1 id="what-is-tcp-ip">What is TCP/IP?</h1>
-
-<p><img src="https://henyxia.github.io/tcp-header.png" alt="TCP header definition" /></p>
-
-<blockquote>
-<p>source: Wikipedia</p>
-</blockquote>
-
-<hr />
-
-<h1 id="what-is-a-dns-nameserver">What is a DNS nameserver?</h1>
-
-<p><img src="https://henyxia.github.io/dns-resolve.png" alt="DNS resolution example" /></p>
-
-<blockquote>
-<p>source: Wikipedia</p>
-</blockquote>
-
-<hr />
-
-<h1 id="some-widely-used-ports">Some widely used ports</h1>
+<h1 id="what-is-nomad">What is Nomad?</h1>
 
 <ul>
-<li><code>80</code> HTTP</li>
-<li><code>443</code> HTTPS</li>
-
-<li><p><code>53</code> DNS</p></li>
-
-<li><p><code>22</code> SSH</p></li>
-
-<li><p><code>123</code> NTP</p></li>
-
-<li><p><code>25</code> SMTP</p></li>
+<li>Lightweight orchestrator written in Go by HashiCorp</li>
+<li>Available on most Unix distributions</li>
+<li>Allow to deploy containers accross multiple hosts</li>
 </ul>
 
-<h1 id="what-is-apache-2">What is Apache 2?</h1>
+<hr />
 
-<p>|||v</p>
+<h1 id="nomad-architecture">Nomad architecture</h1>
 
-<pre><code class="language-html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My awesome website&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    Awesome! It works!
-  &lt;/body&gt;
-&lt;/html&gt;
+<ul>
+<li>Nomad is separated in two roles: masters and clients</li>
+<li>Masters receive order and transmit them to the clients</li>
+<li>Masters ensure the order is respected as much as possible</li>
+<li>In our scenario: the master is the client too</li>
+</ul>
+
+<hr />
+
+<h1 id="nomad-configuration-files">Nomad configuration files</h1>
+
+<p>Separated according to their usage:</p>
+
+<ul>
+<li><code>/etc/nomad.d/base.hcl</code></li>
+<li><code>/etc/nomad.d/client.hcl</code></li>
+<li><code>/etc/nomad.d/server.hcl</code></li>
+</ul>
+
+<hr />
+
+<h1 id="nomad-job-definition">Nomad job definition</h1>
+
+<pre><code>job &quot;my-website&quot; {
+  datacenters = [&quot;dc1&quot;]
+  type = &quot;service&quot;
+
+  update {
+    max_parallel = 1
+    min_healthy_time = &quot;10s&quot;
+    healthy_deadline = &quot;3m&quot;
+  }
+
+  migrate {
+    max_parallel = 1
+    health_check = &quot;checks&quot;
+    min_healthy_time = &quot;10s&quot;
+    healthy_deadline = &quot;5m&quot;
+  }
+
+  group &quot;web-app&quot; {
+    count = 4
+
+    restart {
+      attempts = 2
+      interval = &quot;30m&quot;
+      delay = &quot;30s&quot;
+      mode = &quot;fail&quot;
+    }
+
+    task &quot;nginx&quot; {
+      driver = &quot;docker&quot;
+
+      config {
+        image = &quot;registry-host:5000/myteam/my-image&quot;
+        port_map {
+          web = 8080
+        }
+      }
+
+      resources {
+        cpu    = 500
+        memory = 1024
+        network {
+          mbits = 100
+          port &quot;web&quot; {}
+        }
+      }
+
+      service {
+        name = &quot;my-webapp&quot;
+        tags = [&quot;web&quot;]
+        port = &quot;web&quot;
+        check {
+          name     = &quot;alive&quot;
+          type     = &quot;tcp&quot;
+          interval = &quot;10s&quot;
+          timeout  = &quot;2s&quot;
+        }
+      }
+    }
+  }
+}
 </code></pre>
-
-<p>|||</p>
-
-<p><img src="https://henyxia.github.io/apache2-render.png" alt="Apache 2 render example" /></p>
 
         </div>
       </div>

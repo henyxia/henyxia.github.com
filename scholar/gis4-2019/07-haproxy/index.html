@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Reminders - henyxia&#39;s website
+          HAProxy - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,45 +15,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Reminders" />
-<meta property="og:description" content="System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
- What is a DNS nameserver?  source: Wikipedia
- Some widely used ports  80 HTTP 443 HTTPS 53 DNS
- 22 SSH
- 123 NTP
- 25 SMTP
-  What is Apache 2? |||v
-&lt;html&gt; &lt;head&gt; &lt;title&gt;My awesome website&lt;/title&gt; &lt;/head&gt; &lt;body&gt; Awesome! It works! &lt;/body&gt; &lt;/html&gt;  |||" />
+  <meta property="og:title" content="HAProxy" />
+<meta property="og:description" content="What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failures  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/01-reminders/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/07-haproxy/" />
 
-<meta itemprop="name" content="Reminders">
-<meta itemprop="description" content="System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
- What is a DNS nameserver?  source: Wikipedia
- Some widely used ports  80 HTTP 443 HTTPS 53 DNS
- 22 SSH
- 123 NTP
- 25 SMTP
-  What is Apache 2? |||v
-&lt;html&gt; &lt;head&gt; &lt;title&gt;My awesome website&lt;/title&gt; &lt;/head&gt; &lt;body&gt; Awesome! It works! &lt;/body&gt; &lt;/html&gt;  |||">
+<meta itemprop="name" content="HAProxy">
+<meta itemprop="description" content="What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failures  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets.">
 
 
 
-<meta itemprop="wordCount" content="52">
+<meta itemprop="wordCount" content="262">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Reminders"/>
-<meta name="twitter:description" content="System administration, network and virtualization introduction What is TCP/IP?  source: Wikipedia
- What is a DNS nameserver?  source: Wikipedia
- Some widely used ports  80 HTTP 443 HTTPS 53 DNS
- 22 SSH
- 123 NTP
- 25 SMTP
-  What is Apache 2? |||v
-&lt;html&gt; &lt;head&gt; &lt;title&gt;My awesome website&lt;/title&gt; &lt;/head&gt; &lt;body&gt; Awesome! It works! &lt;/body&gt; &lt;/html&gt;  |||"/>
+<meta name="twitter:title" content="HAProxy"/>
+<meta name="twitter:description" content="What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failures  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -91,7 +70,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Reminders
+        HAProxy
       </div>
     </div>
   </div>
@@ -167,7 +146,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/01-reminders/">Reminders</a>
         
@@ -245,7 +224,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/07-haproxy/">HAProxy</a>
         
@@ -446,60 +425,137 @@ if (!doNotTrack) {
           
 	  
 
-<h2 id="system-administration-network-and-virtualization-introduction">System administration, network and virtualization introduction</h2>
-
-<h1 id="what-is-tcp-ip">What is TCP/IP?</h1>
-
-<p><img src="https://henyxia.github.io/tcp-header.png" alt="TCP header definition" /></p>
-
-<blockquote>
-<p>source: Wikipedia</p>
-</blockquote>
-
-<hr />
-
-<h1 id="what-is-a-dns-nameserver">What is a DNS nameserver?</h1>
-
-<p><img src="https://henyxia.github.io/dns-resolve.png" alt="DNS resolution example" /></p>
-
-<blockquote>
-<p>source: Wikipedia</p>
-</blockquote>
-
-<hr />
-
-<h1 id="some-widely-used-ports">Some widely used ports</h1>
+<h1 id="what-is-haproxy">What is HAProxy?</h1>
 
 <ul>
-<li><code>80</code> HTTP</li>
-<li><code>443</code> HTTPS</li>
-
-<li><p><code>53</code> DNS</p></li>
-
-<li><p><code>22</code> SSH</p></li>
-
-<li><p><code>123</code> NTP</p></li>
-
-<li><p><code>25</code> SMTP</p></li>
+<li>Load balancer written in C</li>
+<li>Available on most Unix distributions</li>
+<li>Allow to balance traffic and avoid downtime in case of failures</li>
 </ul>
 
-<h1 id="what-is-apache-2">What is Apache 2?</h1>
+<hr />
 
-<p>|||v</p>
+<h1 id="haproxy-configuration-file">HAProxy configuration file</h1>
 
-<pre><code class="language-html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My awesome website&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    Awesome! It works!
-  &lt;/body&gt;
-&lt;/html&gt;
+<ul>
+<li>Located in <code>/etc/haproxy/haproxy.conf</code></li>
+<li>Can be checked with <code>haproxy -c -f /etc/haproxy/haproxy.cfg</code></li>
+<li>Restart to apply new configuration with <code>service haproxy restart</code></li>
+</ul>
+
+<hr />
+
+<h1 id="haproxy-configuration">HAProxy configuration</h1>
+
+<h3 id="global-bloc"><code>global</code> bloc</h3>
+
+<pre><code>global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
+
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
+
+        # Default ciphers to use on SSL-enabled listening sockets.
+        # For more information, see ciphers(1SSL).
+        ssl-default-bind-ciphers kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL
 </code></pre>
 
-<p>|||</p>
+<hr />
 
-<p><img src="https://henyxia.github.io/apache2-render.png" alt="Apache 2 render example" /></p>
+<h1 id="haproxy-configuration-1">HAProxy configuration</h1>
+
+<h3 id="defaults-bloc"><code>defaults</code> bloc</h3>
+
+<pre><code>defaults
+        log     global
+        mode    http
+        option  httplog
+        option  dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+        errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+</code></pre>
+
+<hr />
+
+<h1 id="haproxy-configuration-2">HAProxy configuration</h1>
+
+<h3 id="frontend-bloc"><code>frontend</code> bloc</h3>
+
+<pre><code>frontend localnodes
+    bind *:80
+    mode http
+    default_backend nodes
+
+    acl is_other_site hdr(host) -i www.my-other-site.com
+    use_backend nodes2 if is_other_site
+</code></pre>
+
+<hr />
+
+<h1 id="haproxy-configuration-3">HAProxy configuration</h1>
+
+<h3 id="backend-bloc"><code>backend</code> bloc</h3>
+
+<pre><code>backend nodes
+    mode http
+    balance roundrobin
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    server web01 127.0.0.1:9000 check
+    server web02 127.0.0.1:9001 check
+    server web03 127.0.0.1:9002 check
+
+backend nodes2
+    mode http
+    balance roundrobin
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    default-server inter 2s fall 3 rise 2
+    server-template nodes 3 _website2._http.service.consul check resolvers my-resolvers resolve-opts allow-dup-ip resolve-prefer ipv4
+</code></pre>
+
+<hr />
+
+<h1 id="haproxy-configuration-4">HAProxy configuration</h1>
+
+<h3 id="listen-bloc"><code>listen</code> bloc</h3>
+
+<pre><code>listen stats *:1936
+    stats enable
+    stats uri /
+    stats show-node
+    stats show-desc
+    stats show-legends
+    stats auth someuser:password
+</code></pre>
+
+<hr />
+
+<h1 id="haproxy-configuration-5">HAProxy configuration</h1>
+
+<h3 id="resolvers-bloc"><code>resolvers</code> bloc</h3>
+
+<pre><code>resolvers my-resolvers
+    nameserver consul01 127.0.0.1:8600
+    resolve_retries 30
+    timeout retry 2s
+    hold valid 5s
+    accepted_payload_size 8192
+</code></pre>
 
         </div>
       </div>
