@@ -114,3 +114,14 @@ Tutorial 7
 
 * Increase your website to 3 running containers
 * Configure HAProxy to use Consul service discovery
+
+---
+
+Tutorial 8
+===
+
+### 1 point
+
+* Create a virtual machine on the student server
+* Based on Debian 10
+* With proxmox interface `https://chassiron.insecserv.deule.net:8006`
