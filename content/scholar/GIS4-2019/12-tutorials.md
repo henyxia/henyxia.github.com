@@ -1,6 +1,6 @@
 ---
 title: Tutorials
-weight: 110
+weight: 130
 menu:
   main:
     parent:
@@ -122,6 +122,42 @@ Tutorial 8
 
 ### 1 point
 
-* Create a virtual machine on the student server
-* Based on Debian 10
-* With proxmox interface `https://chassiron.insecserv.deule.net:8006`
+* Go on Proxmox interface `https://chassiron.insecserv.deule.net:8006`
+* If not set, add this host in the proxy exception list in your browser
+* Create a virtual machine `vm-$GRP-$ID-template`
+
+---
+
+Tutorial 9
+===
+
+### 1 point
+
+* Create a clone from this template named `vm-$GRP-$ID-haproxy01`
+
+---
+
+Tutorial 10
+===
+
+### 2 points
+
+* Create new clones with Ansible
+    * One VM for Nomad server and Consul named `vm-$GRP-$ID-nomad01`
+    * Three VM for Nomad clients named `vm-$GRP-$ID-node0{1,3}`
+
+---
+
+Tutorial 11
+===
+
+### 3 points
+
+* Deploy consul, nomad and haproxy with Nomad
+
+TIP: public roles to use are:
+
+* `geerlingguy.docker`
+* `brianshumate.nomad`
+* `brianshumate.consul`
+* Create your own role for HAProxy :)
