@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Sys admin - henyxia&#39;s website
+          Ansible - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,24 +15,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Sys admin" />
-<meta property="og:description" content="System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded." />
+  <meta property="og:title" content="Ansible" />
+<meta property="og:description" content="Ansible What is Ansible?  Automation tool Used to deploy and manage mostly remotely Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
+$ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
+$ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/05-system-administration/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/11-ansible/" />
 
-<meta itemprop="name" content="Sys admin">
-<meta itemprop="description" content="System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded.">
+<meta itemprop="name" content="Ansible">
+<meta itemprop="description" content="Ansible What is Ansible?  Automation tool Used to deploy and manage mostly remotely Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
+$ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
+$ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso.">
 
 
 
-<meta itemprop="wordCount" content="223">
+<meta itemprop="wordCount" content="399">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sys admin"/>
-<meta name="twitter:description" content="System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded."/>
+<meta name="twitter:title" content="Ansible"/>
+<meta name="twitter:description" content="Ansible What is Ansible?  Automation tool Used to deploy and manage mostly remotely Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
+$ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
+$ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -70,7 +76,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Sys admin
+        Ansible
       </div>
     </div>
   </div>
@@ -198,7 +204,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/05-system-administration/">Sys admin</a>
         
@@ -276,7 +282,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/11-ansible/">Ansible</a>
         
@@ -451,59 +457,220 @@ if (!doNotTrack) {
           
 	  
 
-<h2 id="system-administration">System administration</h2>
+<h2 id="ansible">Ansible</h2>
 
-<h1 id="what-is-apt-get">What is <code>apt-get</code>?</h1>
+<h3 id="what-is-ansible">What is Ansible?</h3>
 
 <ul>
-<li>Package manager</li>
-<li>Replaced by <code>apt</code> in recent distributions</li>
-<li>Allow to install and maintain softwares</li>
+<li>Automation tool</li>
+<li>Used to deploy and manage mostly remotely</li>
+<li>Used to describe final configuration</li>
+<li>Just YAML files</li>
 </ul>
 
 <hr />
 
-<h1 id="apt-basics">APT basics</h1>
+<h3 id="how-to-use-ansible">How to use Ansible</h3>
 
-<h3 id="install-a-package">Install a package</h3>
+<ul>
+<li><p>Ruled by playbooks</p>
 
-<pre><code>$ apt install apache2
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache
-Use 'apt autoremove' to remove them.
-The following additional packages will be installed:
-  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
-Suggested packages:
-  apache2-doc apache2-suexec-pristine | apache2-suexec-custom
-The following NEW packages will be installed:
-  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
-0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded.
-Need to get 2,189 kB of archives.
-After this operation, 7,567 kB of additional disk space will be used.
-Do you want to continue? [Y/n]
+<pre><code>$ cat certificate.yml
+- name: deploy certificates
+hosts:
+- loadbalancers
+roles:
+- certificates
+- loadbalancing
+</code></pre></li>
+</ul>
+
+<hr />
+
+<h3 id="how-to-use-ansible-1">How to use Ansible</h3>
+
+<ul>
+<li><p>Run it</p>
+
+<pre><code>$ ansible-playbook -i inventory certificate.yml --diff --check
+...
+TASK [arillso.logrotate : install logrotate packages] *************************
+ok: [haproxy-01]
+ok: [haproxy-02]
+
+TASK [arillso.logrotate : create logrotate configuration file] ****************
+ok: [haproxy-01]
+ok: [haproxy-02]
+
+PLAY RECAP ********************************************************************
+haproxy-01 : ok=16   changed=0    unreachable=0    failed=0
+haproxy-02 : ok=17   changed=2    unreachable=0    failed=0
+</code></pre></li>
+</ul>
+
+<hr />
+
+<h3 id="how-to-use-ansible-2">How to use Ansible</h3>
+
+<pre><code>$ cat deploy-server.yml
+- name: deploy virtual machines
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: create vms
+      proxmox_kvm:
+        api_host: &quot;{{ proxmox_api_host }}&quot;
+        api_user: &quot;{{ proxmox_api_user }}&quot;
+        api_password: &quot;{{ proxmox_api_password }}&quot;
+        node: &quot;{{ target_server }}&quot;
+        target: &quot;{{ item.value.node }}&quot;
+        vmid: &quot;{{ item.value.template }}&quot;
+        newid: &quot;{{ item.value.id }}&quot;
+        name: &quot;{{ item.key.split('.')[0] }}&quot;
+        state: present
+        clone: &quot;{{ item.value.template }}&quot;
+        full: true
+        timeout: 300
+      with_dict: &quot;{{ hostvars }}&quot;
+      when: &quot;item.value.template is defined&quot;
 </code></pre>
 
 <hr />
 
-<h1 id="apt-basics-1">APT basics</h1>
+<h3 id="how-to-use-ansible-3">How to use Ansible</h3>
 
-<h3 id="remove-a-package">Remove a package</h3>
+<pre><code>cat inventory
+all:
+  children:
+    loadbalancer:
+      hosts:
+        haproxy01:
+          ansible_host: 10.1.1.2
+          id: 101
+          template: 100
+    nomad-servers:
+      vars:
+        consul_node_role: client
+        nomad_node_role: server
+      hosts:
+        nomad-server01:
+          ansible_host: 10.2.1.1
+          id: 102
+          template: 100
+        nomad-server02:
+          ansible_host: 10.2.1.2
+          id: 103
+          template: 100
+</code></pre>
 
-<pre><code>$ apt remove --purge nginx
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache
-Use 'apt autoremove' to remove them.
-The following packages will be REMOVED:
-  nginx*
-0 upgraded, 0 newly installed, 1 to remove and 157 not upgraded.
-After this operation, 100 kB disk space will be freed.
-Do you want to continue? [Y/n]
+<hr />
+
+<h3 id="how-to-use-ansible-4">How to use Ansible</h3>
+
+<pre><code>&gt; cat roles/loadbalancing/tasks/main.yml
+---
+
+- name: install haproxy
+  tags: loadbalancing
+  apt:
+    name: haproxy
+
+- name: configure haproxy
+  tags: loadbalancing
+  template:
+    src: &quot;haproxy-{{env}}.cfg.j2&quot;
+    dest: &quot;/etc/haproxy/haproxy.cfg&quot;
+    validate: &quot;/usr/sbin/haproxy -c -f %s&quot;
+  notify: restart haproxy
+
+- name: start haproxy
+  tags: loadbalancing
+  service:
+    name: haproxy
+    state: started
+</code></pre>
+
+<hr />
+
+<h3 id="how-to-use-ansible-5">How to use Ansible</h3>
+
+<pre><code>deploy-files.yml         # playbook
+group_vars/
+    all.yml              # variables for all hosts
+    nomad-servers.yml    # variables for group nomad-servers
+roles/
+    common/
+        tasks/
+            main.yml     # where actions are defined
+        handlers/
+            main.yml     # where actions are triggered
+        templates/
+            ntp.conf.j2  # templates file
+        files/
+            bar.txt      # static file
+        vars/
+            main.yml     # variables file
+        defaults/
+            main.yml     # default variables
+</code></pre>
+
+<hr />
+
+<h3 id="ansible-by-example">Ansible by example</h3>
+
+<p>Copy a static file</p>
+
+<pre><code>- name: deploy files
+  hosts: my-server
+  tasks:
+    - name: deploy this file
+      file:
+        src: motd
+        dest: /etc/motd
+        mode: 0644
+        owner: root
+        group: root
+</code></pre>
+
+<hr />
+
+<h3 id="ansible-by-example-1">Ansible by example</h3>
+
+<p>Copy a template</p>
+
+<pre><code>cat roles/loadbalancing/tasks/main.yml
+- name: configure haproxy
+  template:
+    src: &quot;haproxy-{{env}}.cfg.j2&quot;
+    dest: &quot;/etc/haproxy/haproxy.cfg&quot;
+    validate: &quot;/usr/sbin/haproxy -c -f %s&quot;
+  notify: restart haproxy
+</code></pre>
+
+<p>Handle signals</p>
+
+<pre><code>- name: restart haproxy
+  service:
+    name: haproxy
+    state: restarted
+</code></pre>
+
+<hr />
+
+<h3 id="roles-are-here-to-help">Roles are here to help</h3>
+
+<p>Community role example</p>
+
+<pre><code>- name: install docker
+  hosts:
+    - nomad-nodes
+  roles:
+    - geerlingguy.docker
+</code></pre>
+
+<p>How to install it</p>
+
+<pre><code>ansible-galaxy install geerlingguy.docker
 </code></pre>
 
         </div>

@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Sys admin - henyxia&#39;s website
+          Proxmox - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -15,24 +15,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Sys admin" />
-<meta property="og:description" content="System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded." />
+  <meta property="og:title" content="Proxmox" />
+<meta property="og:description" content="Proxmox Introduction What is Proxmox?  An operating system based on Debian Can be installed on raw Debian Create and manage containers and virtual machines Gives tool allowing hot and cold migration of VMs And many other features (like user/group management, HA and so on)  Easily usable through a Web UI Four views are available:
+ Server view Folder view Storage view Pool view  How to create a new virtual machine  From server or folder view Right click on one node Select create a new VM  The CLI To list VMs" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/05-system-administration/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/10-proxmox/" />
 
-<meta itemprop="name" content="Sys admin">
-<meta itemprop="description" content="System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded.">
+<meta itemprop="name" content="Proxmox">
+<meta itemprop="description" content="Proxmox Introduction What is Proxmox?  An operating system based on Debian Can be installed on raw Debian Create and manage containers and virtual machines Gives tool allowing hot and cold migration of VMs And many other features (like user/group management, HA and so on)  Easily usable through a Web UI Four views are available:
+ Server view Folder view Storage view Pool view  How to create a new virtual machine  From server or folder view Right click on one node Select create a new VM  The CLI To list VMs">
 
 
 
-<meta itemprop="wordCount" content="223">
+<meta itemprop="wordCount" content="165">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sys admin"/>
-<meta name="twitter:description" content="System administration What is apt-get?  Package manager Replaced by apt in recent distributions Allow to install and maintain softwares  APT basics Install a package $ apt install apache2 Reading package lists... Done Building dependency tree Reading state information... Done The following packages were automatically installed and are no longer required: hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache Use &#39;apt autoremove&#39; to remove them. The following additional packages will be installed: apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap Suggested packages: apache2-doc apache2-suexec-pristine | apache2-suexec-custom The following NEW packages will be installed: apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap 0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded."/>
+<meta name="twitter:title" content="Proxmox"/>
+<meta name="twitter:description" content="Proxmox Introduction What is Proxmox?  An operating system based on Debian Can be installed on raw Debian Create and manage containers and virtual machines Gives tool allowing hot and cold migration of VMs And many other features (like user/group management, HA and so on)  Easily usable through a Web UI Four views are available:
+ Server view Folder view Storage view Pool view  How to create a new virtual machine  From server or folder view Right click on one node Select create a new VM  The CLI To list VMs"/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -70,7 +73,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Sys admin
+        Proxmox
       </div>
     </div>
   </div>
@@ -198,7 +201,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/05-system-administration/">Sys admin</a>
         
@@ -263,7 +266,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/10-proxmox/">Proxmox</a>
         
@@ -451,59 +454,69 @@ if (!doNotTrack) {
           
 	  
 
-<h2 id="system-administration">System administration</h2>
+<h2 id="proxmox">Proxmox</h2>
 
-<h1 id="what-is-apt-get">What is <code>apt-get</code>?</h1>
+<h1 id="introduction">Introduction</h1>
+
+<h3 id="what-is-proxmox">What is Proxmox?</h3>
 
 <ul>
-<li>Package manager</li>
-<li>Replaced by <code>apt</code> in recent distributions</li>
-<li>Allow to install and maintain softwares</li>
+<li>An operating system based on Debian</li>
+<li>Can be installed on raw Debian</li>
+<li>Create and manage containers and virtual machines</li>
+<li>Gives tool allowing hot and cold migration of VMs</li>
+<li>And many other features (like user/group management, HA and so on)</li>
 </ul>
 
 <hr />
 
-<h1 id="apt-basics">APT basics</h1>
+<h3 id="easily-usable-through-a-web-ui">Easily usable through a Web UI</h3>
 
-<h3 id="install-a-package">Install a package</h3>
+<p>Four views are available:</p>
 
-<pre><code>$ apt install apache2
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache
-Use 'apt autoremove' to remove them.
-The following additional packages will be installed:
-  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
-Suggested packages:
-  apache2-doc apache2-suexec-pristine | apache2-suexec-custom
-The following NEW packages will be installed:
-  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
-0 upgraded, 8 newly installed, 0 to remove and 157 not upgraded.
-Need to get 2,189 kB of archives.
-After this operation, 7,567 kB of additional disk space will be used.
-Do you want to continue? [Y/n]
+<ul>
+<li>Server view</li>
+<li>Folder view</li>
+<li>Storage view</li>
+<li>Pool view</li>
+</ul>
+
+<hr />
+
+<h3 id="how-to-create-a-new-virtual-machine">How to create a new virtual machine</h3>
+
+<ul>
+<li>From server or folder view</li>
+<li>Right click on one node</li>
+<li>Select create a new VM</li>
+</ul>
+
+<hr />
+
+<h3 id="the-cli">The CLI</h3>
+
+<p>To list VMs</p>
+
+<pre><code>root@server:~# qm list
+      VMID NAME         STATUS     MEM(MB)    BOOTDISK(GB) PID
+       117 nomadnode01  running    65536      32.00        2669
+       120 consul01     running    8192       32.00        19705
+       125 edge01       running    4096       32.00        2734
+       126 edge02       running    4096       32.00        2792
+       129 broker01     running    4096       32.00        30455
+       130 broker02     running    4096       32.00        43813
+       131 broker03     running    4096       32.00        46862
+       132 db01         running    4096       32.00        47359
+       148 db02         running    2048       50.00        20171
 </code></pre>
 
 <hr />
 
-<h1 id="apt-basics-1">APT basics</h1>
+<h3 id="the-cli-1">The CLI</h3>
 
-<h3 id="remove-a-package">Remove a package</h3>
+<p>To clone of VM</p>
 
-<pre><code>$ apt remove --purge nginx
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  hddtemp node-normalize.css python3-bottle python3-influxdb python3-netifaces python3-ply python3-psutil python3-pycryptodome python3-pysmi python3-pysnmp4 python3-pystache
-Use 'apt autoremove' to remove them.
-The following packages will be REMOVED:
-  nginx*
-0 upgraded, 0 newly installed, 1 to remove and 157 not upgraded.
-After this operation, 100 kB disk space will be freed.
-Do you want to continue? [Y/n]
+<pre><code>qm clone 100 105 -name db03 -full
 </code></pre>
 
         </div>

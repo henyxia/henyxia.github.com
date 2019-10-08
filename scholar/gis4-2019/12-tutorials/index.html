@@ -18,14 +18,14 @@
   <meta property="og:title" content="Tutorials" />
 <meta property="og:description" content="Tutorials Introduction Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Final exam notation  The final exam will be a written test It will contain everything seen during course and tutorials It will account for 50% of your final score  Final score Your final score will be composed of:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/10-tutorials/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/12-tutorials/" />
 
 <meta itemprop="name" content="Tutorials">
 <meta itemprop="description" content="Tutorials Introduction Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Final exam notation  The final exam will be a written test It will contain everything seen during course and tutorials It will account for 50% of your final score  Final score Your final score will be composed of:">
 
 
 
-<meta itemprop="wordCount" content="322">
+<meta itemprop="wordCount" content="394">
 
 
 
@@ -263,9 +263,35 @@ if (!doNotTrack) {
   
   
     
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/10-proxmox/">Proxmox</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2019/11-ansible/">Ansible</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
       <li class="active">
         
-        <a href="https://henyxia.github.io/scholar/gis4-2019/10-tutorials/">Tutorials</a>
+        <a href="https://henyxia.github.io/scholar/gis4-2019/12-tutorials/">Tutorials</a>
         
       </li>
     
@@ -551,9 +577,53 @@ if (!doNotTrack) {
 <h3 id="1-point-3">1 point</h3>
 
 <ul>
-<li>Create a virtual machine on the student server</li>
-<li>Based on Debian 10</li>
-<li>With proxmox interface <code>https://chassiron.insecserv.deule.net:8006</code></li>
+<li>Go on Proxmox interface <code>https://chassiron.insecserv.deule.net:8006</code></li>
+<li>If not set, add this host in the proxy exception list in your browser</li>
+<li>Create a virtual machine <code>vm-$GRP-$ID-template</code></li>
+</ul>
+
+<hr />
+
+<h1 id="tutorial-9">Tutorial 9</h1>
+
+<h3 id="1-point-4">1 point</h3>
+
+<ul>
+<li>Create a clone from this template named <code>vm-$GRP-$ID-haproxy01</code></li>
+</ul>
+
+<hr />
+
+<h1 id="tutorial-10">Tutorial 10</h1>
+
+<h3 id="2-points">2 points</h3>
+
+<ul>
+<li>Create new clones with Ansible
+
+<ul>
+<li>One VM for Nomad server and Consul named <code>vm-$GRP-$ID-nomad01</code></li>
+<li>Three VM for Nomad clients named <code>vm-$GRP-$ID-node0{1,3}</code></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h1 id="tutorial-11">Tutorial 11</h1>
+
+<h3 id="3-points">3 points</h3>
+
+<ul>
+<li>Deploy consul, nomad and haproxy with Nomad</li>
+</ul>
+
+<p>TIP: public roles to use are:</p>
+
+<ul>
+<li><code>geerlingguy.docker</code></li>
+<li><code>brianshumate.nomad</code></li>
+<li><code>brianshumate.consul</code></li>
+<li>Create your own role for HAProxy :)</li>
 </ul>
 
         </div>
