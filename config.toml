@@ -16,7 +16,7 @@ googleAnalytics = "UA-146517157-1"
     publicationYear = "2019"
 
 [outputs]
-    section = ["JSON", "HTML"]
+    section = ["HTML"]
 
 [[menu.shortlink]]
     identifier = "blog"
