@@ -125,6 +125,7 @@ Tutorial 8
 * Go on Proxmox interface `https://chassiron.insecserv.deule.net:8006`
 * If not set, add this host in the proxy exception list in your browser
 * Create a virtual machine `vm-$GRP-$ID-template`
+* Install Debian on your template
 
 ---
 
