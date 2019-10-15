@@ -64,7 +64,7 @@ root@server:~# qm list
 
 ### The CLI
 
-To clone of VM
+To clone a VM
 
 ```
 qm clone 100 105 -name db03 -full

@@ -13,7 +13,7 @@ Ansible
 ### What is Ansible?
 
 * Automation tool
-* Used to deploy and manage mostly remotely
+* Used mostly remotely to deploy and manage
 * Used to describe final configuration
 * Just YAML files
 

@@ -12,7 +12,7 @@ What is HAProxy?
 
 * Load balancer written in C
 * Available on most Unix distributions
-* Allow to balance traffic and avoid downtime in case of failures
+* Allow to balance traffic and avoid downtime in case of failure
 
 ---
 
@@ -21,7 +21,7 @@ HAProxy configuration file
 
 * Located in `/etc/haproxy/haproxy.conf`
 * Can be checked with `haproxy -c -f /etc/haproxy/haproxy.cfg`
-* Restart to apply new configuration with `service haproxy restart`
+* Restart to apply a new configuration with `service haproxy restart`
 
 ---
 

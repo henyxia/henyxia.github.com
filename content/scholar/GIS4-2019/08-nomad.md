@@ -19,7 +19,7 @@ What is Nomad?
 Nomad architecture
 ===
 
-* Nomad is separated in two roles: masters and clients
+* Nomad is separated in two roles: master and client
 * Masters receive order and transmit them to the clients
 * Masters ensure the order is respected as much as possible
 * In our scenario: the master is the client too

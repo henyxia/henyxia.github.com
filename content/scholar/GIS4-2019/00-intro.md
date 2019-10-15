@@ -26,6 +26,6 @@ First, what is an highly available web application?
 Creating a 'just available' web application
 ===
 
-Let's start with a simplier design.
+Let's start with a simpler design.
 
 ![Basic web design](/basic-web-design.png)
