@@ -78,7 +78,7 @@ ip address del dev eno2 192.168.0.42/24
 Network cards and IPs
 ===
 
-### List neighbors
+### List neighbours
 
 ~~~bash
 root@my-server:~# ip neighbour show |tail -n20
@@ -103,7 +103,7 @@ root@my-server:~# ip neighbour show |tail -n20
 163.172.67.145 dev eno1 lladdr 0c:c4:7a:84:5d:3c STALE
 ~~~
 
-### Delete neighbor entry
+### Delete neighbour entry
 
 ~~~bash
 ip neighbour del 163.172.67.253 dev eno1
@@ -145,9 +145,9 @@ Network cards and persistence
 
 ### network-manager
 
-* an helper for beginners
+* a helper for beginners
 * will mostly conflict with our objectives
-* not on any production grave server
+* not on any production grade server
 
 ### networking
 

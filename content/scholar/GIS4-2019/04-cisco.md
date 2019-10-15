@@ -19,7 +19,7 @@ Network equipments
 
 * Like a desktop computer, but with signigicant differences
 * CPUs with lower capacity
-* Some dedicated chips to handle data flows
+* Some dedicated chips to handle the data flow
 * Specific operating systems (Cisco IOS)
 * No screens, no USB but a lot of ports
 * Configurable via serial or SSH
@@ -70,7 +70,7 @@ See the running configuration:
 router>show running-config
 ```
 
-Setting a cyphered password
+Setting a cyphered password:
 
 ```
 router(config)#enable secret glopglop
@@ -103,7 +103,7 @@ router(config)#exit
 
 # Some basics
 
-Listing interfaces
+Listing interfaces:
 
 ```
 router>show interfaces summary
@@ -127,7 +127,7 @@ TRTL: throttle count
 
 # Some basics
 
-Show running configuration of an interfaces
+Show running configuration of an interface:
 
 ```
 router#show running-config interface TenGigabitEthernet1/19
