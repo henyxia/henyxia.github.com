@@ -17,7 +17,7 @@
       <guid>https://henyxia.github.io/scholar/gis4-2019/00-intro/</guid>
       <description>Module presentation Most of this module is taken from my teacher&amp;rsquo;s website (in French).
 Creating an Highly Available web application First, what is an highly available web application?
-Creating a &amp;lsquo;just available&amp;rsquo; web application Let&amp;rsquo;s start with a simplier design.</description>
+Creating a &amp;lsquo;just available&amp;rsquo; web application Let&amp;rsquo;s start with a simpler design.</description>
     </item>
     
     <item>
@@ -63,8 +63,8 @@ Why VLAN?  Local Area Network (LAN) security limitations Inefficient cost with s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/04-cisco/</guid>
-      <description>Now let&amp;rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
-my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z.</description>
+      <description>Now let&amp;rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle the data flow Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#configure terminal Enter configuration commands, one per line.</description>
     </item>
     
     <item>
@@ -91,7 +91,7 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/07-haproxy/</guid>
-      <description>What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failures  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets.</description>
+      <description>What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets.</description>
     </item>
     
     <item>
@@ -100,7 +100,7 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/08-nomad/</guid>
-      <description>What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: masters and clients Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:</description>
+      <description>What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: master and client Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:</description>
     </item>
     
     <item>
@@ -128,7 +128,7 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/11-ansible/</guid>
-      <description>Ansible What is Ansible?  Automation tool Used to deploy and manage mostly remotely Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
+      <description>Ansible What is Ansible?  Automation tool Used mostly remotely to deploy and manage Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
 $ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
 $ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso.</description>
     </item>

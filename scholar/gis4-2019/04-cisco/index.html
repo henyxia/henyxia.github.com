@@ -16,26 +16,26 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <meta property="og:title" content="Cisco presentation" />
-<meta property="og:description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
-my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z." />
+<meta property="og:description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle the data flow Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/04-cisco/" />
 
 <meta itemprop="name" content="Cisco presentation">
-<meta itemprop="description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
-my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z.">
+<meta itemprop="description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle the data flow Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line.">
 
 
 
-<meta itemprop="wordCount" content="490">
+<meta itemprop="wordCount" content="491">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cisco presentation"/>
-<meta name="twitter:description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle data flows Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
-my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line. End with CNTL/Z."/>
+<meta name="twitter:description" content="Now let&rsquo;s do this on real equipments! Network equipments Definition  Like a desktop computer, but with signigicant differences CPUs with lower capacity Some dedicated chips to handle the data flow Specific operating systems (Cisco IOS) No screens, no USB but a lot of ports Configurable via serial or SSH  Some basics With an example:
+my-server$ ssh admin@router Password: router&gt;enable Password: router#configure terminal Enter configuration commands, one per line."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -465,7 +465,7 @@ if (!doNotTrack) {
 <ul>
 <li>Like a desktop computer, but with signigicant differences</li>
 <li>CPUs with lower capacity</li>
-<li>Some dedicated chips to handle data flows</li>
+<li>Some dedicated chips to handle the data flow</li>
 <li>Specific operating systems (Cisco IOS)</li>
 <li>No screens, no USB but a lot of ports</li>
 <li>Configurable via serial or SSH</li>
@@ -514,7 +514,7 @@ Proceed with reload? [confirm]
 <pre><code>router&gt;show running-config
 </code></pre>
 
-<p>Setting a cyphered password</p>
+<p>Setting a cyphered password:</p>
 
 <pre><code>router(config)#enable secret glopglop
 </code></pre>
@@ -545,7 +545,7 @@ router(config)#exit
 
 <h1 id="some-basics-3">Some basics</h1>
 
-<p>Listing interfaces</p>
+<p>Listing interfaces:</p>
 
 <pre><code>router&gt;show interfaces summary
 *: interface is up
@@ -568,7 +568,7 @@ TRTL: throttle count
 
 <h1 id="some-basics-4">Some basics</h1>
 
-<p>Show running configuration of an interfaces</p>
+<p>Show running configuration of an interface:</p>
 
 <pre><code>router#show running-config interface TenGigabitEthernet1/19
 Building configuration...
