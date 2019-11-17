@@ -2,7 +2,6 @@
 title: Scholar project list
 linktitle: Scholar
 menu: main
-weight: 20
+weight: 30
+empty: true
 ---
-
-Some teaching materials I gave to my students.

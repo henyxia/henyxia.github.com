@@ -13,7 +13,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="/img/{{ .Site.Params.favicon }}">
 
   <!-- css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+  {{ $css := resources.Get "css/style-pulse.css" }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
