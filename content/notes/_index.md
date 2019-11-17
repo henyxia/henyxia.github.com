@@ -5,25 +5,23 @@ menu: main
 weight: 30
 ---
 
-Tired of searching the same thinks on Internet, I decided to store all these infos here.
-
 Notes
 =====
 
-[These notes are available here](https://henyxia.github.io/notes/)
+Tired of searching the same thinks on Internet, I decided to store all these infos here.
 
 IPMI
 ----
 
-* [Common commands](ipmi/basics.md)
-* [Activate the kernel modules](ipmi/kernel-module.md)
+* [Common commands](ipmi/basics/)
+* [Activate the kernel modules](ipmi/kernel-module/)
 
 Ceph
 ----
 
-* [OSD Creation](ceph/create-osd.md)
-* [OSD Removal](ceph/remove-osd.md)
-* [OSD Tuning](ceph/tuning-osd.md)
+* [OSD Creation](ceph/create-osd/)
+* [OSD Removal](ceph/remove-osd/)
+* [OSD Tuning](ceph/tuning-osd/)
 
 [RAID (soft)](raid)
 -------------------
