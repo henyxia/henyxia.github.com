@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Create a Ceph OSD - henyxia&#39;s website
+          Soon to be written - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -16,27 +16,27 @@
   <link rel="stylesheet" href="https://henyxia.github.io/css/style-pulse.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Create a Ceph OSD" />
-<meta property="og:description" content="There are currently two backend storage available in Ceph (since Luminous): FileStore and Bluestore. According to ceph post write performance is almost two times faster on some use cases. Therefore, Bluestore seems to be the new recommended backend for all new installations.
-1 - On the new OSD We absolutely need to check that this new OSD have proper access to the ceph cluster. Run ceph -s and it must return the cluster health status." />
+  <meta property="og:title" content="Soon to be written" />
+<meta property="og:description" content="Soon, I will add more about some projects I worked on (and some I still work on), like:
+ A small monitoring system for the production health based on Arduino Uno A home-made and home-hosted Ceph cluster A Hi-Fi amplifier And more to come!  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/notes/ceph/create-osd/" />
+<meta property="og:url" content="https://henyxia.github.io/projects/soon/" />
 
-<meta itemprop="name" content="Create a Ceph OSD">
-<meta itemprop="description" content="There are currently two backend storage available in Ceph (since Luminous): FileStore and Bluestore. According to ceph post write performance is almost two times faster on some use cases. Therefore, Bluestore seems to be the new recommended backend for all new installations.
-1 - On the new OSD We absolutely need to check that this new OSD have proper access to the ceph cluster. Run ceph -s and it must return the cluster health status.">
+<meta itemprop="name" content="Soon to be written">
+<meta itemprop="description" content="Soon, I will add more about some projects I worked on (and some I still work on), like:
+ A small monitoring system for the production health based on Arduino Uno A home-made and home-hosted Ceph cluster A Hi-Fi amplifier And more to come!  ">
 
 
 
-<meta itemprop="wordCount" content="374">
+<meta itemprop="wordCount" content="43">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Create a Ceph OSD"/>
-<meta name="twitter:description" content="There are currently two backend storage available in Ceph (since Luminous): FileStore and Bluestore. According to ceph post write performance is almost two times faster on some use cases. Therefore, Bluestore seems to be the new recommended backend for all new installations.
-1 - On the new OSD We absolutely need to check that this new OSD have proper access to the ceph cluster. Run ceph -s and it must return the cluster health status."/>
+<meta name="twitter:title" content="Soon to be written"/>
+<meta name="twitter:description" content="Soon, I will add more about some projects I worked on (and some I still work on), like:
+ A small monitoring system for the production health based on Arduino Uno A home-made and home-hosted Ceph cluster A Hi-Fi amplifier And more to come!  "/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -61,8 +61,8 @@ if (!doNotTrack) {
 </head>
 <body><nav class="navbar is-transparent is-fixed-top is-info">
   <div class="navbar-brand">
-  <a class="navbar-item" href="https://henyxia.github.io/notes">
-      NOTES>
+  <a class="navbar-item" href="https://henyxia.github.io/projects">
+      PROJECTS>
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
@@ -74,7 +74,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Create a Ceph OSD
+        Soon to be written
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">Projects</p>
         
@@ -109,7 +109,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/projects/soon/">Soon...</a>
         
@@ -128,7 +128,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <p class="menu-label">Notes</p>
         
@@ -138,7 +138,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <p class="menu-label">Ceph</p>
         
@@ -148,7 +148,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/notes/ceph/create-osd/">Creation</a>
         
@@ -464,85 +464,14 @@ if (!doNotTrack) {
       <div class="content">
         <div class="content">
           
-	  
-
-<p>There are currently two backend storage available in Ceph (since Luminous):
-FileStore and Bluestore. <a href="https://ceph.com/community/new-luminous-bluestore/">According to ceph post</a>
-write performance is almost two times faster on some use cases. Therefore,
-Bluestore seems to be the new recommended backend for all new installations.</p>
-
-<h2 id="1-on-the-new-osd">1 - On the new OSD</h2>
-
-<p>We absolutely need to check that this new OSD have proper access to the ceph
-cluster. Run <code>ceph -s</code> and it must return the cluster health status. If not,
-the configuration files and keyring may not be synced properly.</p>
-
-<h1 id="bluestore">Bluestore</h1>
+	  <p>Soon, I will add more about some projects I worked on (and some I still work on), like:</p>
 
 <ul>
-<li>Set disk target: <code>read DISK</code></li>
-<li>Set cluster ID: <code>read CLUSTER</code></li>
-<li>Check before continuing: <code>echo -e &quot;CLUSTER: $CLUSTER\nDISK:    $DISK&quot;</code></li>
-
-<li><p>Seems good?</p></li>
-
-<li><p>Prepare the new disk with <code>ceph-volume --cluster $CLUSTER lvm prepare --data $DISK</code></p></li>
-
-<li><p>Set the new OSD ID with <code>read OSD_ID</code></p></li>
-
-<li><p>Check with <code>ceph-volume --cluster $CLUSTER lvm list</code></p></li>
-
-<li><p>Finally, activate this new OSD with <code>ceph-volume lvm activate --all</code></p></li>
+<li>A small monitoring system for the production health based on Arduino Uno</li>
+<li>A home-made and home-hosted Ceph cluster</li>
+<li>A Hi-Fi amplifier</li>
+<li>And more to come!</li>
 </ul>
-
-<p><em>The OSD should now join the cluster</em></p>
-
-<h1 id="filestore">Filestore</h1>
-
-<h2 id="2-on-mon">2 - On mon</h2>
-
-<ul>
-<li>Generate UUID: <code>UUID=$(uuidgen)</code></li>
-<li>Generate the OSD secret: <code>OSD_SECRET=$(ceph-authtool --gen-print-key)</code></li>
-<li>Set ID if the OSD is replacing an decommissioned ID: <code>ID={my_id}</code></li>
-<li>Output them for the next steps: <code>echo -e &quot;UUID: $UUID\nSECRET: $OSD_SECRET\nID: $ID&quot;</code></li>
-<li>Create the new OSD: <code>echo &quot;{\&quot;cephx_secret\&quot;: \&quot;$OSD_SECRET\&quot;}&quot; | ceph osd new $UUID $ID -i - -n client.bootstrap-osd -k /var/lib/ceph/bootstrap-osd/ceph.keyring</code> and remember the outputted ID</li>
-</ul>
-
-<h2 id="3-on-new-osd">3 - On new OSD</h2>
-
-<ul>
-<li>Import UUID: <code>read UUID</code></li>
-<li>Import OSD secret: <code>read OSD_SECRET</code></li>
-<li>Import OSD ID: <code>read ID</code></li>
-<li>Set the target disk: <code>read DISK</code> with a path like <code>/dev/sdX</code></li>
-<li>Import Cluster ID if not already present in your env: <code>read CLUSTER</code></li>
-<li>Check before continuing: <code>echo -e &quot;UUID: $UUID\nSECRET: $OSD_SECRET\nID: $ID\nCLUSTER: $CLUSTER\nDISK: $DISK&quot;</code></li>
-
-<li><p>Seems good?</p></li>
-
-<li><p>Format the target disk: <code>mkfs.xfs $DISK</code></p></li>
-
-<li><p>Get the UUID of this new disk: <code>blkid |grep $DISK</code> and <code>read DISK_UUID</code> or <code>DISK_UUID=$(blkid |grep $DISK |cut -d'&quot;' -f2)</code></p></li>
-
-<li><p>Add this new disk to the fstab: <code>echo &quot;UUID=$DISK_UUID /var/lib/ceph/osd/$CLUSTER-$ID xfs rw,relatime,attr2,inode64,noquota 0 0&quot; &gt;&gt; /etc/fstab</code></p></li>
-
-<li><p>Create the mount point: <code>mkdir /var/lib/ceph/osd/$CLUSTER-$ID</code></p></li>
-
-<li><p>Mount the disk: <code>mount -a</code></p></li>
-
-<li><p>Seems good?</p></li>
-
-<li><p>Write the the OSD secret: <code>ceph-authtool --create-keyring /var/lib/ceph/osd/$CLUSTER-$ID/keyring --name osd.$ID --add-key $OSD_SECRET</code></p></li>
-
-<li><p>Initialize the OSD data directory: <code>ceph-osd -i $ID --cluster $CLUSTER --mkfs --osd-uuid $UUID</code></p></li>
-
-<li><p>Fix ownership: <code>chown -R ceph:ceph /var/lib/ceph/osd/$CLUSTER-$ID</code></p></li>
-
-<li><p>Enable and start the service <code>systemctl enable ceph-osd@$ID</code> and finally <code>systemctl start ceph-osd@$ID</code></p></li>
-</ul>
-
-<p><em>The OSD should now join the cluster</em></p>
 
         </div>
       </div>

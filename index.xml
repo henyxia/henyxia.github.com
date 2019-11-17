@@ -193,6 +193,16 @@ modprobe ipmi_devintf modprobe ipmi_si  Source: serverfault</description>
     </item>
     
     <item>
+      <title>Soon to be written</title>
+      <link>https://henyxia.github.io/projects/soon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/projects/soon/</guid>
+      <description>Soon, I will add more about some projects I worked on (and some I still work on), like:
+ A small monitoring system for the production health based on Arduino Uno A home-made and home-hosted Ceph cluster A Hi-Fi amplifier And more to come!  </description>
+    </item>
+    
+    <item>
       <title>Tuning OSD</title>
       <link>https://henyxia.github.io/notes/ceph/tuning-osd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
