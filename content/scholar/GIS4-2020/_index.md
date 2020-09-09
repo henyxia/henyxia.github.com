@@ -1,8 +1,8 @@
 ---
-title: GIS4 - 2019
+title: GIS4 - 2020
 menu:
   main:
     parent: Scholar
 empty: true
-weight: 2
+weight: 1
 ---
