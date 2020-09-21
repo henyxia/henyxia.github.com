@@ -1,6 +1,6 @@
 ---
 title: How works a computer
-linktitle: A computer in details
+linktitle: How works a computer
 weight: 20
 menu:
   main:

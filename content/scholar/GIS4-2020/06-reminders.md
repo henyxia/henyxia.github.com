@@ -1,6 +1,6 @@
 ---
 title: Reminders
-linktitle: Reminders
+linktitle: Some reminders
 weight: 60
 menu:
   main:

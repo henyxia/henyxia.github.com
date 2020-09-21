@@ -1,6 +1,6 @@
 ---
 title: What is virtualization
-linktitle: Virtualization types
+linktitle: Container details
 weight: 40
 menu:
   main:
