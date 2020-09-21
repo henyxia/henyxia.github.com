@@ -151,12 +151,39 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
     </item>
     
     <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/07-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/07-network/</guid>
+      <description>Network interface List interfaces root@my-server:~# ip link show 1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: eno1: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:2e brd ff:ff:ff:ff:ff:ff 3: eno2: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 link/ether 0c:c4:7b:84:5f:3e brd ff:ff:ff:ff:ff:ff  Start an interface ip link set eno1 up  Change a MAC address ip link set eno1 address 00:11:22:33:44:55  IP addresses List IPs root@my-server:~# ip address show 1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/08-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/08-docker/</guid>
+      <description>Docker Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  List local images $ docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE bm-tftp 0.1 7ddc54652dcf 10 days ago 71.4MB debian stable-slim da838f7eb4f8 11 days ago 69.2MB batman-dhcp latest deb682e07fda 2 weeks ago 73.3MB rabbitmq 3-management d55229deb03e 8 weeks ago 187MB postgres 11 b7af9a7c9a68 3 months ago 282MB alpine latest a24bb4013296 3 months ago 5.</description>
+    </item>
+    
+    <item>
       <title>HAProxy</title>
       <link>https://henyxia.github.io/scholar/gis4-2019/07-haproxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/07-haproxy/</guid>
       <description>What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s user haproxy group haproxy daemon # Default SSL material locations ca-base /etc/ssl/certs crt-base /etc/ssl/private # Default ciphers to use on SSL-enabled listening sockets.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/09-haproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/09-haproxy/</guid>
+      <description>HAProxy What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.</description>
     </item>
     
     <item>
@@ -175,6 +202,24 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
       
       <guid>https://henyxia.github.io/scholar/gis4-2019/09-consul/</guid>
       <description>What is Consul?  Lightweight K/V service registry tool written in Go by HashiCorp Available on most Unix distributions Allow to register service and key  Consul example Consul and DNS $ dig @127.0.0.1 -p 8600 _my-webapp._web.service.consul SRV ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.11.5-P4-5.1-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; @10.41.7.83 -p 8600 _my-webapp._web.service.consul SRV ; (1 server found) ;; global options: +cmd ;; Got answer: ;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 51598 ;; flags: qr aa rd; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 9 ;; WARNING: recursion requested but not available ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 4096 ;; QUESTION SECTION: ;_my-webapp.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/10-consul/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/10-consul/</guid>
+      <description>Consul What is Consul?  Lightweight K/V service registry tool written in Go by HashiCorp Available on most Unix distributions Allow to register service and key  Consul example Consul and DNS $ dig @127.0.0.1 -p 8600 _my-webapp._web.service.consul SRV ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.11.5-P4-5.1-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; @10.41.7.83 -p 8600 _my-webapp._web.service.consul SRV ; (1 server found) ;; global options: +cmd ;; Got answer: ;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 51598 ;; flags: qr aa rd; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 9 ;; WARNING: recursion requested but not available ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 4096 ;; QUESTION SECTION: ;_my-webapp.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/11-dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/11-dns/</guid>
+      <description>DNS DNS record types  A: Host address AAAA: IPv6 host address ALIAS: Auto resolved alias CNAME: Canonical name for an alias MX: Mail eXchange NS: Name Server TXT: text field  Common command $ dig www.google.fr ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.11.13-RedHat-9.11.13-3.fc31 &amp;lt;&amp;lt;&amp;gt;&amp;gt; www.google.fr ;; global options: +cmd ;; Got answer: ;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 47305 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1 ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 4096 ;; QUESTION SECTION: ;www.</description>
     </item>
     
     <item>
@@ -199,6 +244,24 @@ $ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso
     </item>
     
     <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/12-nomad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/12-nomad/</guid>
+      <description>Nomad What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: master and client Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://henyxia.github.io/scholar/gis4-2020/13-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/scholar/gis4-2020/13-nginx/</guid>
+      <description>Nginx Main configuration $ cat /etc/nginx/nginx.conf user www-data; worker_processes auto; pid /run/nginx.pid; include /etc/nginx/modules-enabled/*.conf; events { worker_connections 768; } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE ssl_prefer_server_ciphers on; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; include /etc/nginx/conf.d/*.conf; include /etc/nginx/sites-enabled/*; }  Site configuration $ cat /etc/nginx/sites-enabled/default server { listen 8092 default_server; root /var/www/mywebsite; index index.</description>
+    </item>
+    
+    <item>
       <title>Tutorials</title>
       <link>https://henyxia.github.io/scholar/gis4-2019/12-tutorials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -209,20 +272,21 @@ $ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso
     
     <item>
       <title></title>
-      <link>https://henyxia.github.io/scholar/gis4-2020/07-some-technologies/</link>
+      <link>https://henyxia.github.io/scholar/gis4-2020/14-proxmox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://henyxia.github.io/scholar/gis4-2020/07-some-technologies/</guid>
-      <description></description>
+      <guid>https://henyxia.github.io/scholar/gis4-2020/14-proxmox/</guid>
+      <description> Proxmox What is Proxmox?  An operating system based on Debian Can be installed on raw Debian Create and manage containers and virtual machines Gives tool allowing hot and cold migration of VMs And many other features (like user/group management, HA and so on)  Easily usable through a Web UI Four views are available:
+ Server view Folder view Storage view Pool view  How to create a new virtual machine  From server or folder view Right click on one node Select create a new VM  Example </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://henyxia.github.io/scholar/gis4-2020/08-tutorials/</link>
+      <link>https://henyxia.github.io/scholar/gis4-2020/15-tutorials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://henyxia.github.io/scholar/gis4-2020/08-tutorials/</guid>
-      <description></description>
+      <guid>https://henyxia.github.io/scholar/gis4-2020/15-tutorials/</guid>
+      <description>Available soon</description>
     </item>
     
     <item>

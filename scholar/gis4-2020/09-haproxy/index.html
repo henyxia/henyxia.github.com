@@ -17,23 +17,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <meta property="og:title" content="" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="HAProxy What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/08-tutorials/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/09-haproxy/" />
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="HAProxy What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.">
 
 
 
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="254">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="HAProxy What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -251,7 +251,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">Scholar</p>
         
@@ -261,7 +261,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">GIS4 - 2020</p>
         
@@ -352,6 +352,123 @@ if (!doNotTrack) {
       <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2020/06-reminders/">Some reminders</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/07-network/">Major network commands</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/08-docker/">Docker reference</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="active">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/09-haproxy/">HAProxy reference</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/10-consul/">Consul reference</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/11-dns/">DNS</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/12-nomad/">Nomad reference</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/13-nginx/">Nginx</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/14-proxmox/">Proxmox reference</a>
+        
+      </li>
+    
+  
+
+          
+            
+  
+  
+    
+      <li class="">
+        
+        <a href="https://henyxia.github.io/scholar/gis4-2020/15-tutorials/">2020 - Tutorials</a>
         
       </li>
     
@@ -569,6 +686,117 @@ if (!doNotTrack) {
         <div class="content">
           
 	  
+
+<h1 id="haproxy">HAProxy</h1>
+
+<h1 id="what-is-haproxy">What is HAProxy?</h1>
+
+<ul>
+<li>Load balancer written in C</li>
+<li>Available on most Unix distributions</li>
+<li>Allow to balance traffic and avoid downtime in case of failure</li>
+</ul>
+
+<h1 id="haproxy-configuration-file">HAProxy configuration file</h1>
+
+<ul>
+<li>Located in <code>/etc/haproxy/haproxy.conf</code></li>
+<li>Can be checked with <code>haproxy -c -f /etc/haproxy/haproxy.cfg</code></li>
+<li>Restart to apply a new configuration with <code>service haproxy restart</code></li>
+</ul>
+
+<h1 id="haproxy-configuration">HAProxy configuration</h1>
+
+<h3 id="global-bloc"><code>global</code> bloc</h3>
+
+<pre><code>global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
+
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
+
+        # Default ciphers to use on SSL-enabled listening sockets.
+        # For more information, see ciphers(1SSL).
+        ssl-default-bind-ciphers kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL
+</code></pre>
+
+<h3 id="defaults-bloc"><code>defaults</code> bloc</h3>
+
+<pre><code>defaults
+        log     global
+        mode    http
+        option  httplog
+        option  dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+        errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+</code></pre>
+
+<h3 id="frontend-bloc"><code>frontend</code> bloc</h3>
+
+<pre><code>frontend localnodes
+    bind *:80
+    mode http
+    default_backend nodes
+
+    acl is_other_site hdr(host) -i www.my-other-site.com
+    use_backend nodes2 if is_other_site
+</code></pre>
+
+<h3 id="backend-bloc"><code>backend</code> bloc</h3>
+
+<pre><code>backend nodes
+    mode http
+    balance roundrobin
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    server web01 127.0.0.1:9000 check
+    server web02 127.0.0.1:9001 check
+    server web03 127.0.0.1:9002 check
+
+backend nodes2
+    mode http
+    balance roundrobin
+    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+    default-server inter 2s fall 3 rise 2
+    server-template nodes 3 _website2._http.service.consul check resolvers my-resolvers resolve-opts allow-dup-ip resolve-prefer ipv4
+</code></pre>
+
+<h3 id="listen-bloc"><code>listen</code> bloc</h3>
+
+<pre><code>listen stats *:1936
+    stats enable
+    stats uri /
+    stats show-node
+    stats show-desc
+    stats show-legends
+    stats auth someuser:password
+</code></pre>
+
+<h3 id="resolvers-bloc"><code>resolvers</code> bloc</h3>
+
+<pre><code>resolvers my-resolvers
+    nameserver consul01 127.0.0.1:8600
+    resolve_retries 30
+    timeout retry 2s
+    hold valid 5s
+    accepted_payload_size 8192
+</code></pre>
+
         </div>
       </div>
     </article>

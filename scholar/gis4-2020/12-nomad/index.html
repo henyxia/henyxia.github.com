@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Tags - henyxia&#39;s website
+           - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -16,23 +16,24 @@
   <link rel="stylesheet" href="https://henyxia.github.io/css/style-pulse.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Tags" />
-<meta property="og:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://henyxia.github.io/tags/" />
+  <meta property="og:title" content="" />
+<meta property="og:description" content="Nomad What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: master and client Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/12-nomad/" />
 
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    ">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Nomad What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: master and client Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:">
 
+
+
+<meta itemprop="wordCount" content="199">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    "/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Nomad What is Nomad?  Lightweight orchestrator written in Go by HashiCorp Available on most Unix distributions Allow to deploy containers accross multiple hosts  Nomad architecture  Nomad is separated in two roles: master and client Masters receive order and transmit them to the clients Masters ensure the order is respected as much as possible In our scenario: the master is the client too  Nomad configuration files Separated according to their usage:"/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -57,8 +58,8 @@ if (!doNotTrack) {
 </head>
 <body><nav class="navbar is-transparent is-fixed-top is-info">
   <div class="navbar-brand">
-  <a class="navbar-item" href="https://henyxia.github.io/tags">
-      TAGS>
+  <a class="navbar-item" href="https://henyxia.github.io/scholar">
+      SCHOLAR>
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
@@ -70,7 +71,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Tags
+        
       </div>
     </div>
   </div>
@@ -250,7 +251,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">Scholar</p>
         
@@ -260,7 +261,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">GIS4 - 2020</p>
         
@@ -426,7 +427,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2020/12-nomad/">Nomad reference</a>
         
@@ -685,6 +686,100 @@ if (!doNotTrack) {
         <div class="content">
           
 	  
+
+<h1 id="nomad">Nomad</h1>
+
+<h1 id="what-is-nomad">What is Nomad?</h1>
+
+<ul>
+<li>Lightweight orchestrator written in Go by HashiCorp</li>
+<li>Available on most Unix distributions</li>
+<li>Allow to deploy containers accross multiple hosts</li>
+</ul>
+
+<h1 id="nomad-architecture">Nomad architecture</h1>
+
+<ul>
+<li>Nomad is separated in two roles: master and client</li>
+<li>Masters receive order and transmit them to the clients</li>
+<li>Masters ensure the order is respected as much as possible</li>
+<li>In our scenario: the master is the client too</li>
+</ul>
+
+<h1 id="nomad-configuration-files">Nomad configuration files</h1>
+
+<p>Separated according to their usage:</p>
+
+<ul>
+<li><code>/etc/nomad.d/base.hcl</code></li>
+<li><code>/etc/nomad.d/client.hcl</code></li>
+<li><code>/etc/nomad.d/server.hcl</code></li>
+</ul>
+
+<h1 id="nomad-job-definition">Nomad job definition</h1>
+
+<pre><code>job &quot;my-website&quot; {
+  datacenters = [&quot;dc1&quot;]
+  type = &quot;service&quot;
+
+  update {
+    max_parallel = 1
+    min_healthy_time = &quot;10s&quot;
+    healthy_deadline = &quot;3m&quot;
+  }
+
+  migrate {
+    max_parallel = 1
+    health_check = &quot;checks&quot;
+    min_healthy_time = &quot;10s&quot;
+    healthy_deadline = &quot;5m&quot;
+  }
+
+  group &quot;web-app&quot; {
+    count = 4
+
+    restart {
+      attempts = 2
+      interval = &quot;30m&quot;
+      delay = &quot;30s&quot;
+      mode = &quot;fail&quot;
+    }
+
+    task &quot;nginx&quot; {
+      driver = &quot;docker&quot;
+
+      config {
+        image = &quot;registry-host:5000/myteam/my-image&quot;
+        port_map {
+          web = 8080
+        }
+      }
+
+      resources {
+        cpu    = 500
+        memory = 1024
+        network {
+          mbits = 100
+          port &quot;web&quot; {}
+        }
+      }
+
+      service {
+        name = &quot;my-webapp&quot;
+        tags = [&quot;web&quot;]
+        port = &quot;web&quot;
+        check {
+          name     = &quot;alive&quot;
+          type     = &quot;tcp&quot;
+          interval = &quot;10s&quot;
+          timeout  = &quot;2s&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
         </div>
       </div>
     </article>

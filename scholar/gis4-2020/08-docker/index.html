@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Docker - henyxia&#39;s website
+           - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -16,24 +16,24 @@
   <link rel="stylesheet" href="https://henyxia.github.io/css/style-pulse.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Docker" />
-<meta property="og:description" content="What is Docker?  Isolation technology allowing to run a software within the same kernel as the host A separated process namespace is created for this purpose Docker run images, which are a full snapshot of applications (with their dependencies if needed) Images can be ran anywhere, no matter the operating system used Many base images have already been build by the community and hosted in Docker Hub  Docker basics Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  Docker basics Start an image detached $ docker run -it nginx:latest # detach with ^C-P ^C-Q  Start an image attached $ docker run -d nginx:latest 39a0263258f66217fc751aeb799b586d9d14b709f6d2a5dbd502afaa7e89b636  Docker basics List containers $ docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES b9568988ad7a nginx:latest &quot;nginx -g &#39;daemon of…&quot; 3 minutes ago Up 3 minutes 80/tcp agitated_feynman 39a0263258f6 nginx:latest &quot;nginx -g &#39;daemon of…&quot; 4 minutes ago Up 4 minutes 80/tcp suspicious_bardeen  Docker basics Show logs of a container $ docker logs 309fdd3451a9 Initializing Gerrit site ." />
+  <meta property="og:title" content="" />
+<meta property="og:description" content="Docker Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  List local images $ docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE bm-tftp 0.1 7ddc54652dcf 10 days ago 71.4MB debian stable-slim da838f7eb4f8 11 days ago 69.2MB batman-dhcp latest deb682e07fda 2 weeks ago 73.3MB rabbitmq 3-management d55229deb03e 8 weeks ago 187MB postgres 11 b7af9a7c9a68 3 months ago 282MB alpine latest a24bb4013296 3 months ago 5." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/06-docker/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/08-docker/" />
 
-<meta itemprop="name" content="Docker">
-<meta itemprop="description" content="What is Docker?  Isolation technology allowing to run a software within the same kernel as the host A separated process namespace is created for this purpose Docker run images, which are a full snapshot of applications (with their dependencies if needed) Images can be ran anywhere, no matter the operating system used Many base images have already been build by the community and hosted in Docker Hub  Docker basics Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  Docker basics Start an image detached $ docker run -it nginx:latest # detach with ^C-P ^C-Q  Start an image attached $ docker run -d nginx:latest 39a0263258f66217fc751aeb799b586d9d14b709f6d2a5dbd502afaa7e89b636  Docker basics List containers $ docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES b9568988ad7a nginx:latest &quot;nginx -g &#39;daemon of…&quot; 3 minutes ago Up 3 minutes 80/tcp agitated_feynman 39a0263258f6 nginx:latest &quot;nginx -g &#39;daemon of…&quot; 4 minutes ago Up 4 minutes 80/tcp suspicious_bardeen  Docker basics Show logs of a container $ docker logs 309fdd3451a9 Initializing Gerrit site .">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Docker Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  List local images $ docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE bm-tftp 0.1 7ddc54652dcf 10 days ago 71.4MB debian stable-slim da838f7eb4f8 11 days ago 69.2MB batman-dhcp latest deb682e07fda 2 weeks ago 73.3MB rabbitmq 3-management d55229deb03e 8 weeks ago 187MB postgres 11 b7af9a7c9a68 3 months ago 282MB alpine latest a24bb4013296 3 months ago 5.">
 
 
 
-<meta itemprop="wordCount" content="731">
+<meta itemprop="wordCount" content="607">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="What is Docker?  Isolation technology allowing to run a software within the same kernel as the host A separated process namespace is created for this purpose Docker run images, which are a full snapshot of applications (with their dependencies if needed) Images can be ran anywhere, no matter the operating system used Many base images have already been build by the community and hosted in Docker Hub  Docker basics Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  Docker basics Start an image detached $ docker run -it nginx:latest # detach with ^C-P ^C-Q  Start an image attached $ docker run -d nginx:latest 39a0263258f66217fc751aeb799b586d9d14b709f6d2a5dbd502afaa7e89b636  Docker basics List containers $ docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES b9568988ad7a nginx:latest &quot;nginx -g &#39;daemon of…&quot; 3 minutes ago Up 3 minutes 80/tcp agitated_feynman 39a0263258f6 nginx:latest &quot;nginx -g &#39;daemon of…&quot; 4 minutes ago Up 4 minutes 80/tcp suspicious_bardeen  Docker basics Show logs of a container $ docker logs 309fdd3451a9 Initializing Gerrit site ."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Docker Pull an image $ docker pull nginx:latest latest: Pulling from library/nginx b8f262c62ec6: Pull complete a6639d774c21: Pull complete 22a7aa8442bf: Pull complete Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c Status: Downloaded newer image for nginx:latest  List local images $ docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE bm-tftp 0.1 7ddc54652dcf 10 days ago 71.4MB debian stable-slim da838f7eb4f8 11 days ago 69.2MB batman-dhcp latest deb682e07fda 2 weeks ago 73.3MB rabbitmq 3-management d55229deb03e 8 weeks ago 187MB postgres 11 b7af9a7c9a68 3 months ago 282MB alpine latest a24bb4013296 3 months ago 5."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -71,7 +71,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Docker
+        
       </div>
     </div>
   </div>
@@ -261,7 +261,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">GIS4 - 2020</p>
         
@@ -375,7 +375,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2020/08-docker/">Docker reference</a>
         
@@ -485,7 +485,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <p class="menu-label">GIS4 - 2019</p>
         
@@ -573,7 +573,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/06-docker/">Docker</a>
         
@@ -687,19 +687,7 @@ if (!doNotTrack) {
           
 	  
 
-<h1 id="what-is-docker">What is Docker?</h1>
-
-<ul>
-<li>Isolation technology allowing to run a software within the same kernel as the host</li>
-<li>A separated process namespace is created for this purpose</li>
-<li>Docker run images, which are a full snapshot of applications (with their dependencies if needed)</li>
-<li>Images can be ran anywhere, no matter the operating system used</li>
-<li>Many base images have already been build by the community and hosted in Docker Hub</li>
-</ul>
-
-<hr />
-
-<h1 id="docker-basics">Docker basics</h1>
+<h1 id="docker">Docker</h1>
 
 <h3 id="pull-an-image">Pull an image</h3>
 
@@ -712,25 +700,49 @@ Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c
 Status: Downloaded newer image for nginx:latest
 </code></pre>
 
-<hr />
+<h3 id="list-local-images">List local images</h3>
 
-<h1 id="docker-basics-1">Docker basics</h1>
+<pre><code>$ docker image ls
+REPOSITORY                 TAG                      IMAGE ID            CREATED             SIZE
+bm-tftp                    0.1                      7ddc54652dcf        10 days ago         71.4MB
+debian                     stable-slim              da838f7eb4f8        11 days ago         69.2MB
+batman-dhcp                latest                   deb682e07fda        2 weeks ago         73.3MB
+rabbitmq                   3-management             d55229deb03e        8 weeks ago         187MB
+postgres                   11                       b7af9a7c9a68        3 months ago        282MB
+alpine                     latest                   a24bb4013296        3 months ago        5.57MB
+rabbitmq                   3.7-management           c497955c219a        4 months ago        180MB
+redis                      alpine                   29c713657d31        4 months ago        31.6MB
+golang                     1.13.11-buster           6a67120df3f4        4 months ago        803MB
+nginx                      alpine                   89ec9da68213        5 months ago        19.9MB
+djfarrelly/maildev         latest                   8c016b0ceb3c        14 months ago       79.8MB
+mysql                      5.6.43                   bc788a6a2745        18 months ago       256MB
+postgres                   10.2-alpine              400ef39e0dbf        2 years ago         39.5MB
+</code></pre>
 
-<h3 id="start-an-image-detached">Start an image detached</h3>
+<h3 id="delete-local-image">Delete local image</h3>
+
+<pre><code>$ docker image rm 926fbd714c0e
+Deleted: sha256:926fbd714c0e0ade9f56cfde5854b507e29dea584d747267a9d1fd92e4a21995
+Deleted: sha256:c086d58b3b8a851bb63694c637725d89b4bec9bf42bc22afbcea80e04d6248f6
+Deleted: sha256:de230fa08e61512837c758f79de4451b59aa7b35b059536ce8f092a798170341
+Deleted: sha256:cce1de5fafa9b555b784b8aceb95f04a84bb24170aa59a017cfd0acd62248e64
+Deleted: sha256:7bcfcbd4f645beaa4dc663a1c1d683e1eaf084c5a3a04ceeddd1ccd4a7ece044
+Deleted: sha256:874b3e23fbaf3e9c3c08b0c8b3130633f9fc1b91bf49a41540f28cfed7d916a2
+Deleted: sha256:4c07fcdde2c433bb04a6b989a78797648bf3603d4a1775c4719a6d18f08fbd27
+
+</code></pre>
+
+<h3 id="start-an-image-attached">Start an image attached</h3>
 
 <pre><code>$ docker run -it nginx:latest
 # detach with ^C-P ^C-Q
 </code></pre>
 
-<h3 id="start-an-image-attached">Start an image attached</h3>
+<h3 id="start-an-image-detached">Start an image detached</h3>
 
 <pre><code>$ docker run -d nginx:latest
 39a0263258f66217fc751aeb799b586d9d14b709f6d2a5dbd502afaa7e89b636
 </code></pre>
-
-<hr />
-
-<h1 id="docker-basics-2">Docker basics</h1>
 
 <h3 id="list-containers">List containers</h3>
 
@@ -739,10 +751,6 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 b9568988ad7a        nginx:latest        &quot;nginx -g 'daemon of…&quot;   3 minutes ago       Up 3 minutes        80/tcp              agitated_feynman
 39a0263258f6        nginx:latest        &quot;nginx -g 'daemon of…&quot;   4 minutes ago       Up 4 minutes        80/tcp              suspicious_bardeen
 </code></pre>
-
-<hr />
-
-<h1 id="docker-basics-3">Docker basics</h1>
 
 <h3 id="show-logs-of-a-container">Show logs of a container</h3>
 
@@ -771,10 +779,6 @@ Reindexed 2 documents in projects index in 0.3s (7.4/s)
 [2019-09-11 13:27:17,118] [main] INFO  com.google.gerrit.server.plugins.PluginLoader : Loaded plugin plugin-manager, version v3.0.1
 </code></pre>
 
-<hr />
-
-<h1 id="docker-basics-4">Docker basics</h1>
-
 <h3 id="stop-a-container">Stop a container</h3>
 
 <pre><code>$ docker stop 39a0263258f6
@@ -786,10 +790,6 @@ Reindexed 2 documents in projects index in 0.3s (7.4/s)
 <pre><code>$ docker rm 39a0263258f6
 39a0263258f6
 </code></pre>
-
-<hr />
-
-<h1 id="docker-basics-5">Docker basics</h1>
 
 <h3 id="get-container-ip">Get container IP</h3>
 
@@ -811,19 +811,13 @@ Reindexed 2 documents in projects index in 0.3s (7.4/s)
                     &quot;GlobalIPv6PrefixLen&quot;: 0,
 </code></pre>
 
-<hr />
-
-<h1 id="docker-basics-6">Docker basics</h1>
-
 <h3 id="execute-another-processus-inside-the-container">Execute another processus inside the container</h3>
 
 <pre><code>$ docker exec -it unruffled_goldstine bash
 root@cb651a07bbde:/#
 </code></pre>
 
-<hr />
-
-<h1 id="dockerfile-files">Dockerfile files</h1>
+<h1 id="dockerfile">Dockerfile</h1>
 
 <p>Description of how the image should be built</p>
 
@@ -846,8 +840,6 @@ ENTRYPOINT [&quot;/entrypoint&quot;]
 
 <h1 id="dockerfile-builds">Dockerfile builds</h1>
 
-<p>Description of how the image should be built</p>
-
 <pre><code>$ docker build -t my-image:v0.1 .
 Digest: sha256:0edcfe1b610d878c8fbc036bdc68380e0ca102be6a250d139c5bd3669ba63c10
 Sending build context to Docker daemon  56.14MB
@@ -862,48 +854,6 @@ Step 2/15 : RUN apt update ...
  ---&gt; d131535f4e6d
 Step 3/15 : COPY ./docker/base/fpm/resources/php.ini /usr/local/etc/php/php.ini
 ...
-</code></pre>
-
-<hr />
-
-<h1 id="docker-images-list">Docker images list</h1>
-
-<pre><code>$ docker images
-REPOSITORY                                                      TAG                                        IMAGE ID            CREATED             SIZE
-my-image                                                        v0.1                                       ffa3e8f1253b        1 hour ago          12.7MB
-nginx                                                           latest                                     ab56bba91343        4 days ago          126MB
-php                                                             7.3-fpm-buster                             7d3076bd7d18        13 days ago         401MB
-netboxcommunity/netbox                                          latest                                     4235b672902f        2 weeks ago         574MB
-bitnami/redis                                                   5.0-debian-9                               4728a00b0b66        2 weeks ago         96.6MB
-cleveritcz/oncall                                               latest                                     6c54dc35833b        3 weeks ago         784MB
-redis                                                           4-alpine                                   442c73e7ad1d        3 weeks ago         20.4MB
-nginx                                                           &lt;none&gt;                                     5a3221f0137b        4 weeks ago         126MB
-debian                                                          stable                                     f5356914cf3c        4 weeks ago         114MB
-debian                                                          buster                                     85c4fd36a543        4 weeks ago         114MB
-netboxcommunity/netbox                                          v2.6.2-ldap                                dd8a992d667f        6 weeks ago         577MB
-goalert/all-in-one                                              latest                                     c7bba1104fc0        7 weeks ago         149MB
-alpine                                                          latest                                     b7b28af77ffe        2 months ago        5.58MB
-gerritcodereview/gerrit                                         latest                                     514d2781f71d        2 months ago        564MB
-nginx                                                           1.15-alpine                                dd025cdfe837        4 months ago        16.1MB
-domistyle/idrac6                                                latest                                     21e598472b60        5 months ago        545MB
-dictcp/oncall                                                   latest                                     1a46b171ebe1        12 months ago       715MB
-postgres                                                        10.4-alpine                                962ed899c609        13 months ago       72.9MB
-</code></pre>
-
-<hr />
-
-<h1 id="publish-image-on-registry">Publish image on registry</h1>
-
-<h3 id="publish-and-push">Publish and push</h3>
-
-<pre><code>$ docker tag my-image:v0.1 registry-host:5000/myteam/my-image
-
-$ docker push registry-host:5000/myteam/my-image
-</code></pre>
-
-<h3 id="pull-from-anywhere">Pull from anywhere</h3>
-
-<pre><code>$ docker pull registry-host:5000/myteam/my-image
 </code></pre>
 
         </div>

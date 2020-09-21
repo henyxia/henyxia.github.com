@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Tags - henyxia&#39;s website
+           - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -16,23 +16,24 @@
   <link rel="stylesheet" href="https://henyxia.github.io/css/style-pulse.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Tags" />
-<meta property="og:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://henyxia.github.io/tags/" />
+  <meta property="og:title" content="" />
+<meta property="og:description" content="Nginx Main configuration $ cat /etc/nginx/nginx.conf user www-data; worker_processes auto; pid /run/nginx.pid; include /etc/nginx/modules-enabled/*.conf; events { worker_connections 768; } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE ssl_prefer_server_ciphers on; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; include /etc/nginx/conf.d/*.conf; include /etc/nginx/sites-enabled/*; }  Site configuration $ cat /etc/nginx/sites-enabled/default server { listen 8092 default_server; root /var/www/mywebsite; index index." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/13-nginx/" />
 
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    ">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Nginx Main configuration $ cat /etc/nginx/nginx.conf user www-data; worker_processes auto; pid /run/nginx.pid; include /etc/nginx/modules-enabled/*.conf; events { worker_connections 768; } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE ssl_prefer_server_ciphers on; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; include /etc/nginx/conf.d/*.conf; include /etc/nginx/sites-enabled/*; }  Site configuration $ cat /etc/nginx/sites-enabled/default server { listen 8092 default_server; root /var/www/mywebsite; index index.">
 
+
+
+<meta itemprop="wordCount" content="99">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="        I love doing computer stuff.
-        Open source and free software for the win!
-    "/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Nginx Main configuration $ cat /etc/nginx/nginx.conf user www-data; worker_processes auto; pid /run/nginx.pid; include /etc/nginx/modules-enabled/*.conf; events { worker_connections 768; } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE ssl_prefer_server_ciphers on; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; include /etc/nginx/conf.d/*.conf; include /etc/nginx/sites-enabled/*; }  Site configuration $ cat /etc/nginx/sites-enabled/default server { listen 8092 default_server; root /var/www/mywebsite; index index."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -57,8 +58,8 @@ if (!doNotTrack) {
 </head>
 <body><nav class="navbar is-transparent is-fixed-top is-info">
   <div class="navbar-brand">
-  <a class="navbar-item" href="https://henyxia.github.io/tags">
-      TAGS>
+  <a class="navbar-item" href="https://henyxia.github.io/scholar">
+      SCHOLAR>
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>
@@ -70,7 +71,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Tags
+        
       </div>
     </div>
   </div>
@@ -250,7 +251,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">Scholar</p>
         
@@ -260,7 +261,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">GIS4 - 2020</p>
         
@@ -439,7 +440,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2020/13-nginx/">Nginx</a>
         
@@ -685,6 +686,64 @@ if (!doNotTrack) {
         <div class="content">
           
 	  
+
+<h1 id="nginx">Nginx</h1>
+
+<h1 id="main-configuration">Main configuration</h1>
+
+<pre><code>$ cat /etc/nginx/nginx.conf
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+    worker_connections 768;
+}
+
+http {
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+    types_hash_max_size 2048;
+
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
+    ssl_prefer_server_ciphers on;
+
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    include /etc/nginx/conf.d/*.conf;
+    include /etc/nginx/sites-enabled/*;
+}
+
+</code></pre>
+
+<h1 id="site-configuration">Site configuration</h1>
+
+<pre><code>$ cat /etc/nginx/sites-enabled/default
+
+server {
+    listen 8092 default_server;
+
+    root /var/www/mywebsite;
+
+    index index.html;
+
+    server_name _;
+
+    location / {
+        # First attempt to serve request as file, then
+        # as directory, then fall back to displaying a 404.
+        try_files $uri $uri/ =404;
+    }
+}
+</code></pre>
+
         </div>
       </div>
     </article>

@@ -79,7 +79,19 @@
   </url>
   
   <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/07-network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/08-docker/</loc>
+  </url>
+  
+  <url>
     <loc>https://henyxia.github.io/scholar/gis4-2019/07-haproxy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/09-haproxy/</loc>
   </url>
   
   <url>
@@ -91,6 +103,14 @@
   </url>
   
   <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/10-consul/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/11-dns/</loc>
+  </url>
+  
+  <url>
     <loc>https://henyxia.github.io/scholar/gis4-2019/10-proxmox/</loc>
   </url>
   
@@ -99,17 +119,23 @@
   </url>
   
   <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/12-nomad/</loc>
+  </url>
+  
+  <url>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/13-nginx/</loc>
+  </url>
+  
+  <url>
     <loc>https://henyxia.github.io/scholar/gis4-2019/12-tutorials/</loc>
   </url>
   
   <url>
-    <loc>https://henyxia.github.io/scholar/gis4-2020/07-some-technologies/</loc>
-    <priority>0</priority>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/14-proxmox/</loc>
   </url>
   
   <url>
-    <loc>https://henyxia.github.io/scholar/gis4-2020/08-tutorials/</loc>
-    <priority>0</priority>
+    <loc>https://henyxia.github.io/scholar/gis4-2020/15-tutorials/</loc>
   </url>
   
   <url>
