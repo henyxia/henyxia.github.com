@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Ansible - henyxia&#39;s website
+          How works a computer - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -16,30 +16,24 @@
   <link rel="stylesheet" href="https://henyxia.github.io/css/style-pulse.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Ansible" />
-<meta property="og:description" content="Ansible What is Ansible?  Automation tool Used mostly remotely to deploy and manage Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
-$ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
-$ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso." />
+  <meta property="og:title" content="How works a computer" />
+<meta property="og:description" content=" How computer really works  BIOS (or UEFI) received power on signal BIOS initialize all direct peripherals BIOS looks for a bootable device BIOS switch to bootloader Bootloader loads kernel Kernel initialize everything Kernel switch to userland (init, systemd-init, wininit.exe) Init starts service manager (systemd, openrc, svchost.exe) Service manager starts real software (nginx, sshd, kde4)  How computer really works Process tree henyxia@yggdrasil:~ pstree systemd─┬─ModemManager───2*[{ModemManager}] ├─NetworkManager───2*[{NetworkManager}] ├─alsactl ├─auditd───{auditd} ├─avahi-daemon───avahi-daemon ├─bash───firefox─┬─RDD Process───3*[{RDD Process}] │ ├─4*[Web Content───42*[{Web Content}]] │ ├─Web Content───39*[{Web Content}] │ ├─2*[Web Content───41*[{Web Content}]] │ ├─WebExtensions───32*[{WebExtensions}] │ └─80*[{firefox}] ├─bash───pavucontrol───3*[{pavucontrol}] ├─bash───spotify─┬─spotify───spotify───11*[{spotify}] │ ├─2*[spotify───4*[{spotify}]] │ └─29*[{spotify}]  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2019/11-ansible/" />
+<meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/02-how-works-a-computer/" />
 
-<meta itemprop="name" content="Ansible">
-<meta itemprop="description" content="Ansible What is Ansible?  Automation tool Used mostly remotely to deploy and manage Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
-$ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
-$ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso.">
+<meta itemprop="name" content="How works a computer">
+<meta itemprop="description" content=" How computer really works  BIOS (or UEFI) received power on signal BIOS initialize all direct peripherals BIOS looks for a bootable device BIOS switch to bootloader Bootloader loads kernel Kernel initialize everything Kernel switch to userland (init, systemd-init, wininit.exe) Init starts service manager (systemd, openrc, svchost.exe) Service manager starts real software (nginx, sshd, kde4)  How computer really works Process tree henyxia@yggdrasil:~ pstree systemd─┬─ModemManager───2*[{ModemManager}] ├─NetworkManager───2*[{NetworkManager}] ├─alsactl ├─auditd───{auditd} ├─avahi-daemon───avahi-daemon ├─bash───firefox─┬─RDD Process───3*[{RDD Process}] │ ├─4*[Web Content───42*[{Web Content}]] │ ├─Web Content───39*[{Web Content}] │ ├─2*[Web Content───41*[{Web Content}]] │ ├─WebExtensions───32*[{WebExtensions}] │ └─80*[{firefox}] ├─bash───pavucontrol───3*[{pavucontrol}] ├─bash───spotify─┬─spotify───spotify───11*[{spotify}] │ ├─2*[spotify───4*[{spotify}]] │ └─29*[{spotify}]  ">
 
 
 
-<meta itemprop="wordCount" content="399">
+<meta itemprop="wordCount" content="92">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Ansible"/>
-<meta name="twitter:description" content="Ansible What is Ansible?  Automation tool Used mostly remotely to deploy and manage Used to describe final configuration Just YAML files  How to use Ansible  Ruled by playbooks
-$ cat certificate.yml - name: deploy certificates hosts: - loadbalancers roles: - certificates - loadbalancing   How to use Ansible  Run it
-$ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso.logrotate : install logrotate packages] ************************* ok: [haproxy-01] ok: [haproxy-02] TASK [arillso."/>
+<meta name="twitter:title" content="How works a computer"/>
+<meta name="twitter:description" content=" How computer really works  BIOS (or UEFI) received power on signal BIOS initialize all direct peripherals BIOS looks for a bootable device BIOS switch to bootloader Bootloader loads kernel Kernel initialize everything Kernel switch to userland (init, systemd-init, wininit.exe) Init starts service manager (systemd, openrc, svchost.exe) Service manager starts real software (nginx, sshd, kde4)  How computer really works Process tree henyxia@yggdrasil:~ pstree systemd─┬─ModemManager───2*[{ModemManager}] ├─NetworkManager───2*[{NetworkManager}] ├─alsactl ├─auditd───{auditd} ├─avahi-daemon───avahi-daemon ├─bash───firefox─┬─RDD Process───3*[{RDD Process}] │ ├─4*[Web Content───42*[{Web Content}]] │ ├─Web Content───39*[{Web Content}] │ ├─2*[Web Content───41*[{Web Content}]] │ ├─WebExtensions───32*[{WebExtensions}] │ └─80*[{firefox}] ├─bash───pavucontrol───3*[{pavucontrol}] ├─bash───spotify─┬─spotify───spotify───11*[{spotify}] │ ├─2*[spotify───4*[{spotify}]] │ └─29*[{spotify}]  "/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -77,7 +71,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Ansible
+        How works a computer
       </div>
     </div>
   </div>
@@ -267,7 +261,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <p class="menu-label">GIS4 - 2020</p>
         
@@ -303,7 +297,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/scholar/gis4-2020/02-how-works-a-computer/">How works a computer</a>
         
@@ -374,7 +368,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <p class="menu-label">GIS4 - 2019</p>
         
@@ -527,7 +521,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/scholar/gis4-2019/11-ansible/">Ansible</a>
         
@@ -576,220 +570,42 @@ if (!doNotTrack) {
           
 	  
 
-<h2 id="ansible">Ansible</h2>
-
-<h3 id="what-is-ansible">What is Ansible?</h3>
+<h1 id="how-computer-really-works">How computer really works</h1>
 
 <ul>
-<li>Automation tool</li>
-<li>Used mostly remotely to deploy and manage</li>
-<li>Used to describe final configuration</li>
-<li>Just YAML files</li>
+<li>BIOS (or UEFI) received power on signal</li>
+<li>BIOS initialize all direct peripherals</li>
+<li>BIOS looks for a bootable device</li>
+<li>BIOS switch to bootloader</li>
+<li>Bootloader loads kernel</li>
+<li>Kernel initialize everything</li>
+<li>Kernel switch to userland (<code>init</code>, <code>systemd-init</code>, <code>wininit.exe</code>)</li>
+<li>Init starts service manager (<code>systemd</code>, <code>openrc</code>, <code>svchost.exe</code>)</li>
+<li>Service manager starts real software (<code>nginx</code>, <code>sshd</code>, <code>kde4</code>)</li>
 </ul>
 
 <hr />
 
-<h3 id="how-to-use-ansible">How to use Ansible</h3>
+<h1 id="how-computer-really-works-1">How computer really works</h1>
 
-<ul>
-<li><p>Ruled by playbooks</p>
+<h3 id="process-tree">Process tree</h3>
 
-<pre><code>$ cat certificate.yml
-- name: deploy certificates
-hosts:
-- loadbalancers
-roles:
-- certificates
-- loadbalancing
-</code></pre></li>
-</ul>
-
-<hr />
-
-<h3 id="how-to-use-ansible-1">How to use Ansible</h3>
-
-<ul>
-<li><p>Run it</p>
-
-<pre><code>$ ansible-playbook -i inventory certificate.yml --diff --check
-...
-TASK [arillso.logrotate : install logrotate packages] *************************
-ok: [haproxy-01]
-ok: [haproxy-02]
-
-TASK [arillso.logrotate : create logrotate configuration file] ****************
-ok: [haproxy-01]
-ok: [haproxy-02]
-
-PLAY RECAP ********************************************************************
-haproxy-01 : ok=16   changed=0    unreachable=0    failed=0
-haproxy-02 : ok=17   changed=2    unreachable=0    failed=0
-</code></pre></li>
-</ul>
-
-<hr />
-
-<h3 id="how-to-use-ansible-2">How to use Ansible</h3>
-
-<pre><code>$ cat deploy-server.yml
-- name: deploy virtual machines
-  hosts: localhost
-  gather_facts: false
-  tasks:
-    - name: create vms
-      proxmox_kvm:
-        api_host: &quot;{{ proxmox_api_host }}&quot;
-        api_user: &quot;{{ proxmox_api_user }}&quot;
-        api_password: &quot;{{ proxmox_api_password }}&quot;
-        node: &quot;{{ target_server }}&quot;
-        target: &quot;{{ item.value.node }}&quot;
-        vmid: &quot;{{ item.value.template }}&quot;
-        newid: &quot;{{ item.value.id }}&quot;
-        name: &quot;{{ item.key.split('.')[0] }}&quot;
-        state: present
-        clone: &quot;{{ item.value.template }}&quot;
-        full: true
-        timeout: 300
-      with_dict: &quot;{{ hostvars }}&quot;
-      when: &quot;item.value.template is defined&quot;
-</code></pre>
-
-<hr />
-
-<h3 id="how-to-use-ansible-3">How to use Ansible</h3>
-
-<pre><code>cat inventory
-all:
-  children:
-    loadbalancer:
-      hosts:
-        haproxy01:
-          ansible_host: 10.1.1.2
-          id: 101
-          template: 100
-    nomad-servers:
-      vars:
-        consul_node_role: client
-        nomad_node_role: server
-      hosts:
-        nomad-server01:
-          ansible_host: 10.2.1.1
-          id: 102
-          template: 100
-        nomad-server02:
-          ansible_host: 10.2.1.2
-          id: 103
-          template: 100
-</code></pre>
-
-<hr />
-
-<h3 id="how-to-use-ansible-4">How to use Ansible</h3>
-
-<pre><code>&gt; cat roles/loadbalancing/tasks/main.yml
----
-
-- name: install haproxy
-  tags: loadbalancing
-  apt:
-    name: haproxy
-
-- name: configure haproxy
-  tags: loadbalancing
-  template:
-    src: &quot;haproxy-{{env}}.cfg.j2&quot;
-    dest: &quot;/etc/haproxy/haproxy.cfg&quot;
-    validate: &quot;/usr/sbin/haproxy -c -f %s&quot;
-  notify: restart haproxy
-
-- name: start haproxy
-  tags: loadbalancing
-  service:
-    name: haproxy
-    state: started
-</code></pre>
-
-<hr />
-
-<h3 id="how-to-use-ansible-5">How to use Ansible</h3>
-
-<pre><code>deploy-files.yml         # playbook
-group_vars/
-    all.yml              # variables for all hosts
-    nomad-servers.yml    # variables for group nomad-servers
-roles/
-    common/
-        tasks/
-            main.yml     # where actions are defined
-        handlers/
-            main.yml     # where actions are triggered
-        templates/
-            ntp.conf.j2  # templates file
-        files/
-            bar.txt      # static file
-        vars/
-            main.yml     # variables file
-        defaults/
-            main.yml     # default variables
-</code></pre>
-
-<hr />
-
-<h3 id="ansible-by-example">Ansible by example</h3>
-
-<p>Copy a static file</p>
-
-<pre><code>- name: deploy files
-  hosts: my-server
-  tasks:
-    - name: deploy this file
-      file:
-        src: motd
-        dest: /etc/motd
-        mode: 0644
-        owner: root
-        group: root
-</code></pre>
-
-<hr />
-
-<h3 id="ansible-by-example-1">Ansible by example</h3>
-
-<p>Copy a template</p>
-
-<pre><code>cat roles/loadbalancing/tasks/main.yml
-- name: configure haproxy
-  template:
-    src: &quot;haproxy-{{env}}.cfg.j2&quot;
-    dest: &quot;/etc/haproxy/haproxy.cfg&quot;
-    validate: &quot;/usr/sbin/haproxy -c -f %s&quot;
-  notify: restart haproxy
-</code></pre>
-
-<p>Handle signals</p>
-
-<pre><code>- name: restart haproxy
-  service:
-    name: haproxy
-    state: restarted
-</code></pre>
-
-<hr />
-
-<h3 id="roles-are-here-to-help">Roles are here to help</h3>
-
-<p>Community role example</p>
-
-<pre><code>- name: install docker
-  hosts:
-    - nomad-nodes
-  roles:
-    - geerlingguy.docker
-</code></pre>
-
-<p>How to install it</p>
-
-<pre><code>ansible-galaxy install geerlingguy.docker
+<pre><code>henyxia@yggdrasil:~ pstree
+systemd─┬─ModemManager───2*[{ModemManager}]
+        ├─NetworkManager───2*[{NetworkManager}]
+        ├─alsactl
+        ├─auditd───{auditd}
+        ├─avahi-daemon───avahi-daemon
+        ├─bash───firefox─┬─RDD Process───3*[{RDD Process}]
+        │                ├─4*[Web Content───42*[{Web Content}]]
+        │                ├─Web Content───39*[{Web Content}]
+        │                ├─2*[Web Content───41*[{Web Content}]]
+        │                ├─WebExtensions───32*[{WebExtensions}]
+        │                └─80*[{firefox}]
+        ├─bash───pavucontrol───3*[{pavucontrol}]
+        ├─bash───spotify─┬─spotify───spotify───11*[{spotify}]
+        │                ├─2*[spotify───4*[{spotify}]]
+        │                └─29*[{spotify}]
 </code></pre>
 
         </div>
