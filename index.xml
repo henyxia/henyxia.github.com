@@ -286,7 +286,7 @@ $ ansible-playbook -i inventory certificate.yml --diff --check ... TASK [arillso
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2020/15-tutorials/</guid>
-      <description>Available soon</description>
+      <description>Tutorials Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Tutorial 1 1 point  Go to your team virtual machine and setup network The proxmox interface is available at https://jw.</description>
     </item>
     
     <item>

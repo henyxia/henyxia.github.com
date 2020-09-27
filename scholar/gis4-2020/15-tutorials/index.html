@@ -17,23 +17,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <meta property="og:title" content="" />
-<meta property="og:description" content="Available soon" />
+<meta property="og:description" content="Tutorials Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Tutorial 1 1 point  Go to your team virtual machine and setup network The proxmox interface is available at https://jw." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://henyxia.github.io/scholar/gis4-2020/15-tutorials/" />
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Available soon">
+<meta itemprop="description" content="Tutorials Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Tutorial 1 1 point  Go to your team virtual machine and setup network The proxmox interface is available at https://jw.">
 
 
 
-<meta itemprop="wordCount" content="2">
+<meta itemprop="wordCount" content="312">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Available soon"/>
+<meta name="twitter:description" content="Tutorials Team organization  Everyone will have an assigned team Every team will have an unique ID  Tutorials organization  There will be multiple tutorials Every completed tutorial will be rewarded with points The point quantity will be linked to the difficulty of the tutorial Tutorial completion can only be validated by teachers  Tutorial 1 1 point  Go to your team virtual machine and setup network The proxmox interface is available at https://jw."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -685,7 +685,114 @@ if (!doNotTrack) {
       <div class="content">
         <div class="content">
           
-	  <p>Available soon</p>
+	  
+
+<h2 id="tutorials">Tutorials</h2>
+
+<h3 id="team-organization">Team organization</h3>
+
+<ul>
+<li>Everyone will have an assigned team</li>
+<li>Every team will have an unique ID</li>
+</ul>
+
+<h3 id="tutorials-organization">Tutorials organization</h3>
+
+<ul>
+<li>There will be multiple tutorials</li>
+<li>Every completed tutorial will be rewarded with points</li>
+<li>The point quantity will be linked to the difficulty of the tutorial</li>
+<li>Tutorial completion can only be validated by teachers</li>
+</ul>
+
+<h1 id="tutorial-1">Tutorial 1</h1>
+
+<h3 id="1-point">1 point</h3>
+
+<ul>
+<li>Go to your team virtual machine and setup network</li>
+<li>The proxmox interface is available at <a href="https://jw.plil.net:8006">https://jw.plil.net:8006</a> (user: <code>root</code>, password: as usual, method: <code>PAM</code>)</li>
+<li>Your virtual machine ID is your group number with your group number (ex, group 2 team4: ID=204)</li>
+<li>The IP to set is 10.0.1.$VM_ID</li>
+<li>The netmask is 255.0.0.0</li>
+
+<li><p>The gateway is 10.0.0.1</p></li>
+
+<li><p>You can test if you successfully set your network configuration by trying to ping Google (8.8.8.8)</p></li>
+
+<li><p>Also, you configuration needs to be reboot-proof</p></li>
+</ul>
+
+<h1 id="tutorial-2">Tutorial 2</h1>
+
+<h3 id="1-point-1">1 point</h3>
+
+<ul>
+<li><p>Install Nginx and configure it to serve an HTML you will create in /var/www/</p></li>
+
+<li><p>Note: to install nginx, do not forget to set your <code>resolv.conf</code> file</p></li>
+</ul>
+
+<h1 id="tutorial-3">Tutorial 3</h1>
+
+<h3 id="1-point-2">1 point</h3>
+
+<ul>
+<li>Install HAProxy 2.2</li>
+
+<li><p>Set up HAProxy to accept traffic from port 8888 and redirect it to your Nginx</p></li>
+
+<li><p>Tip: Your virtual machines are running Debian 10</p></li>
+
+<li><p>Second tip: This <a href="https://haproxy.debian.net">website</a> could be useful</p></li>
+</ul>
+
+<h1 id="tutorial-4">Tutorial 4</h1>
+
+<h3 id="1-point-3">1 point</h3>
+
+<ul>
+<li>Install Docker</li>
+<li>Pull the latest Nginx image from Docker Hub</li>
+<li>Copy your previous web page inside a Nginx container with <code>docker cp</code> command</li>
+<li>Redirect the port 8889 with HAProxy to this container</li>
+</ul>
+
+<h1 id="tutorial-5">Tutorial 5</h1>
+
+<h3 id="2-points">2 points</h3>
+
+<ul>
+<li>Create a Dockerfile with Nginx and your web page</li>
+<li>Create an image with this Dockerfile named <code>web-$VM_ID:v1</code></li>
+<li>Publish your image on the registry: 10.99.99.97</li>
+</ul>
+
+<h1 id="tutorial-6">Tutorial 6</h1>
+
+<h3 id="1-point-4">1 point</h3>
+
+<ul>
+<li>Install Nomad</li>
+<li>Use it as a single master and client node (<a href="https://www.nomadproject.io/intro/getting-started/running.html">doc</a>)</li>
+</ul>
+
+<h1 id="tutorial-7">Tutorial 7</h1>
+
+<h3 id="2-points-1">2 points</h3>
+
+<ul>
+<li>Create a job definition and start your container image with Nomad</li>
+</ul>
+
+<h1 id="tutorial-8">Tutorial 8</h1>
+
+<h3 id="3-points">3 points</h3>
+
+<ul>
+<li>Increase your website to 3 running containers</li>
+<li>Configure HAProxy to use Consul service discovery</li>
+</ul>
 
         </div>
       </div>
