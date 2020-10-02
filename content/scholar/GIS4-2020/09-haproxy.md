@@ -19,7 +19,7 @@ What is HAProxy?
 HAProxy configuration file
 ==
 
-* Located in `/etc/haproxy/haproxy.conf`
+* Located in `/etc/haproxy/haproxy.cfg`
 * Can be checked with `haproxy -c -f /etc/haproxy/haproxy.cfg`
 * Restart to apply a new configuration with `service haproxy restart`
 
