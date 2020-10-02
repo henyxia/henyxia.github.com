@@ -116,13 +116,13 @@ auto lo
 iface lo inet loopback
 ~~~
 
-`/etc/network/interfaces/eno1`
+`/etc/network/interfaces.d/eno1`
 ~~~bash
 allow-hotplug eno1
 iface eno1 inet dhcp
 ~~~
 
-`/etc/network/interfaces/eno2`
+`/etc/network/interfaces.d/eno2`
 ~~~bash
 allow-hotplug eno1
 iface eno1 inet static
