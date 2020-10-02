@@ -183,7 +183,7 @@ my-server$ ssh admin@router Password: router&amp;gt;enable Password: router#conf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://henyxia.github.io/scholar/gis4-2020/09-haproxy/</guid>
-      <description>HAProxy What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.conf Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.</description>
+      <description>HAProxy What is HAProxy?  Load balancer written in C Available on most Unix distributions Allow to balance traffic and avoid downtime in case of failure  HAProxy configuration file  Located in /etc/haproxy/haproxy.cfg Can be checked with haproxy -c -f /etc/haproxy/haproxy.cfg Restart to apply a new configuration with service haproxy restart  HAProxy configuration global bloc global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.</description>
     </item>
     
     <item>
