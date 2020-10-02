@@ -28,7 +28,7 @@ Tutorial 1
 ### 1 point
 
 * Go to your team virtual machine and setup network
-* The proxmox interface is available at https://jw.plil.net:8006 (user: `root`, password: as usual, method: `PAM`)
+* The proxmox interface is available at https://jw.plil.fr:8006 (user: `root`, password: as usual, method: `PAM`)
 * Your virtual machine ID is your group number with your group number (ex, group 2 team4: ID=204)
 * The IP to set is 10.0.1.$VM_ID
 * The netmask is 255.0.0.0
