@@ -26,7 +26,7 @@
 
 
 
-<meta itemprop="wordCount" content="312">
+<meta itemprop="wordCount" content="749">
 
 
 
@@ -793,6 +793,133 @@ if (!doNotTrack) {
 <li>Increase your website to 3 running containers</li>
 <li>Configure HAProxy to use Consul service discovery</li>
 </ul>
+
+<h1 id="tutorial-9">Tutorial 9</h1>
+
+<h3 id="1-point-5">1 point</h3>
+
+<ul>
+<li>Add a route on your computer (the zabeth) to access the virtual machines directly</li>
+<li>Network to add is <code>10.0..0.0/8</code></li>
+<li>Hop to use is <code>172.26.145.250</code></li>
+</ul>
+
+<h1 id="tutorial-10">Tutorial 10</h1>
+
+<h3 id="2-points-2">2 points</h3>
+
+<ul>
+<li>Reconfigure your nomad server to use the common consul (<code>10.99.99.96:8500</code>) and the common nomad server (<code>10.99.99.96:4646</code>)</li>
+<li>This <a href="https://www.nomadproject.io/docs/configuration/consul#default">example</a> should help you to setup the consul part</li>
+<li>Configure <code>bind_addr</code> to you virtual machine IP</li>
+<li>You will need to run nomad with the following command: <code>nomad agent -config=/etc/nomad.d</code></li>
+<li>Go to the common nomad <code>http://10.99.99.96:4646/ui/clients</code> and check that your VM IP is well set within the <code>nomad-client</code> service</li>
+</ul>
+
+<h1 id="tutorial-11">Tutorial 11</h1>
+
+<h3 id="1-point-6">1 point</h3>
+
+<ul>
+<li>Create an account on this Gitlab <a href="https://gitlab.gis-virt.fr/">https://gitlab.gis-virt.fr/</a></li>
+<li>Create a repo for your team in <code>gis2020/grp$Xteam$Y</code> with <code>$x</code> being your group number and <code>$y</code> your team number (ex <code>grp1team02</code>)</li>
+<li>Add your files to the repo: <code>index.html</code> , <code>Dockerfile</code></li>
+<li>Add your nomad job definition, name it: <code>project.nomad</code></li>
+</ul>
+
+<h1 id="tutorial-12">Tutorial 12</h1>
+
+<p>This tutorial will make all your previous work deployable automatically from Gitlab.
+Steps will be detailed to help you.</p>
+
+<h3 id="3-points-1">3 points</h3>
+
+<ul>
+<li>Edit your <code>project.nomad</code> file
+
+<ul>
+<li>Set the job name to <code>web-$VMID</code> (ex <code>web-103</code>)</li>
+<li>Set memory requierement to 128 Mo</li>
+<li>Set CPU requirement to 500 MHz
+
+<ul>
+<li>Set count to 4</li>
+</ul></li>
+<li>Set docker image to <code>10.99.99.97:5000/web-$VMID:${CI_COMMIT_SHORT_SHA}</code> (ex: <code>10.99.99.97:5000/web-103:${CI_COMMIT_SHORT_SHA}</code>)</li>
+<li>Set the service name to <code>web-$VMID</code> (ex <code>web-103</code>)</li>
+<li>Set the service tag and port to <code>web</code></li>
+</ul></li>
+<li>Commit and push your changes</li>
+
+<li><p>Add the following file to your repository: (do not forget to change <code>$VMID</code>)</p>
+
+<pre><code>variables:
+NOMAD_ADDR: http://10.99.99.96:4646
+docker_registry: 10.99.99.97:5000
+docker_image: web-$VMID
+
+stages:
+- build
+- deploy
+
+build:
+stage: build
+image: docker
+tags:
+- docker
+script:
+- tag=${docker_registry}/${docker_image}:${CI_COMMIT_SHORT_SHA}
+- echo &quot;building and pushing tag $tag&quot;
+- docker build -t ${tag} -f Dockerfile .
+- docker push ${tag}
+
+deploy:
+stage: deploy
+image: hendrikmaus/nomad-cli
+tags:
+- docker
+script:
+- apk add gettext
+- envsubst '${CI_COMMIT_SHORT_SHA}' &lt; project.nomad &gt; job.nomad
+- cat job.nomad
+- nomad validate job.nomad
+- nomad plan job.nomad || if [ $? -eq 255 ]; then exit 255; else echo &quot;success&quot;; fi
+- nomad run job.nomad
+</code></pre></li>
+
+<li><p>You can check the deployment on your Gitlab repo (ex: <code>https://gitlab.gis-virt.fr/gis2020/grp3team01/-/jobs</code>)</p></li>
+
+<li><p>Once deployed, you will see your job running on the common Nomad: <a href="http://10.99.99.96:4646/ui/jobs">http://10.99.99.96:4646/ui/jobs</a></p></li>
+</ul>
+
+<h1 id="tutorial-13">Tutorial 13</h1>
+
+<h3 id="1-point-7">1 point</h3>
+
+<ul>
+<li>Connect to <code>10.99.99.96</code></li>
+<li>Edit the HAProxy configuration
+
+<ul>
+<li>Add your backend named <code>web-$VMID</code></li>
+<li>Add a redirection from <code>web-$VMID.gis-virt.fr</code> to your backend</li>
+<li>Do not forget to validate your configuration with <code>haproxy -c -f /etc/haproxy.cfg</code></li>
+<li>Restart with <code>systemctl restart haproxy</code></li>
+</ul></li>
+<li>You should now see your website by going on <code>https://web-$VMID.gis-virt.fr</code></li>
+</ul>
+
+<h1 id="tutorial-14">Tutorial 14</h1>
+
+<h3 id="1-point-8">1 point</h3>
+
+<ul>
+<li>Now edit your <code>index.html</code> file</li>
+<li>Commit and push your changes</li>
+<li>You should see the change on your website <code>https://web-$VMID.gis-virt.fr</code> few seconds/minutes later</li>
+</ul>
+
+<h1 id="thank-you-for-following-these-tutorials">Thank you for following these tutorials :)</h1>
 
         </div>
       </div>
