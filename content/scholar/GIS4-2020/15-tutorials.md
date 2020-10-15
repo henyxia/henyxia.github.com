@@ -99,3 +99,115 @@ Tutorial 8
 
 * Increase your website to 3 running containers
 * Configure HAProxy to use Consul service discovery
+
+Tutorial 9
+===
+
+### 1 point
+
+* Add a route on your computer (the zabeth) to access the virtual machines directly
+* Network to add is `10.0..0.0/8`
+* Hop to use is `172.26.145.250`
+
+Tutorial 10
+===
+
+### 2 points
+
+* Reconfigure your nomad server to use the common consul (`10.99.99.96:8500`) and the common nomad server (`10.99.99.96:4646`)
+* This [example](https://www.nomadproject.io/docs/configuration/consul#default) should help you to setup the consul part
+* Configure `bind_addr` to you virtual machine IP
+* You will need to run nomad with the following command: `nomad agent -config=/etc/nomad.d`
+* Go to the common nomad `http://10.99.99.96:4646/ui/clients` and check that your VM IP is well set within the `nomad-client` service
+
+Tutorial 11
+===
+
+### 1 point
+
+* Create an account on this Gitlab https://gitlab.gis-virt.fr/
+* Create a repo for your team in `gis2020/grp$Xteam$Y` with `$x` being your group number and `$y` your team number (ex `grp1team02`)
+* Add your files to the repo: `index.html` , `Dockerfile`
+* Add your nomad job definition, name it: `project.nomad`
+
+Tutorial 12
+===
+
+This tutorial will make all your previous work deployable automatically from Gitlab.
+Steps will be detailed to help you.
+
+### 3 points
+
+* Edit your `project.nomad` file
+	* Set the job name to `web-$VMID` (ex `web-103`)
+	* Set memory requierement to 128 Mo
+	* Set CPU requirement to 500 MHz
+        * Set count to 4
+	* Set docker image to `10.99.99.97:5000/web-$VMID:${CI_COMMIT_SHORT_SHA}` (ex: `10.99.99.97:5000/web-103:${CI_COMMIT_SHORT_SHA}`)
+	* Set the service name to `web-$VMID` (ex `web-103`)
+	* Set the service tag and port to `web`
+* Commit and push your changes
+* Add the following file to your repository: (do not forget to change `$VMID`)
+
+```
+variables:
+  NOMAD_ADDR: http://10.99.99.96:4646
+  docker_registry: 10.99.99.97:5000
+  docker_image: web-$VMID
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: docker
+  tags:
+    - docker
+  script:
+    - tag=${docker_registry}/${docker_image}:${CI_COMMIT_SHORT_SHA}
+    - echo "building and pushing tag $tag"
+    - docker build -t ${tag} -f Dockerfile .
+    - docker push ${tag}
+
+deploy:
+  stage: deploy
+  image: hendrikmaus/nomad-cli
+  tags:
+    - docker
+  script:
+    - apk add gettext
+    - envsubst '${CI_COMMIT_SHORT_SHA}' < project.nomad > job.nomad
+    - cat job.nomad
+    - nomad validate job.nomad
+    - nomad plan job.nomad || if [ $? -eq 255 ]; then exit 255; else echo "success"; fi
+    - nomad run job.nomad
+```
+
+* You can check the deployment on your Gitlab repo (ex: `https://gitlab.gis-virt.fr/gis2020/grp3team01/-/jobs`)
+* Once deployed, you will see your job running on the common Nomad: http://10.99.99.96:4646/ui/jobs
+
+Tutorial 13
+===
+
+### 1 point
+
+* Connect to `10.99.99.96`
+* Edit the HAProxy configuration
+	* Add your backend named `web-$VMID`
+	* Add a redirection from `web-$VMID.gis-virt.fr` to your backend
+	* Do not forget to validate your configuration with `haproxy -c -f /etc/haproxy.cfg`
+	* Restart with `systemctl restart haproxy`
+* You should now see your website by going on `https://web-$VMID.gis-virt.fr`
+
+Tutorial 14
+===
+
+### 1 point
+
+* Now edit your `index.html` file
+* Commit and push your changes
+* You should see the change on your website `https://web-$VMID.gis-virt.fr` few seconds/minutes later
+
+Thank you for following these tutorials :)
+===
