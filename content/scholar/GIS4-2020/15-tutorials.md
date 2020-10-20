@@ -147,7 +147,9 @@ Steps will be detailed to help you.
 	* Set the service name to `web-$VMID` (ex `web-103`)
 	* Set the service tag and port to `web`
 * Commit and push your changes
-* Add the following file to your repository: (do not forget to change `$VMID`)
+* Add the following file, named `.gitlab-ci.yml` to your repository: (do not forget to change `$VMID`)
+
+Note: you must see this file in raw format [here](https://raw.githubusercontent.com/henyxia/henyxia.github.com/source/content/scholar/GIS4-2020/15-tutorials.md) to have correct indentation.
 
 ```
 variables:
