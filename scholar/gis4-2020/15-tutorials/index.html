@@ -26,7 +26,7 @@
 
 
 
-<meta itemprop="wordCount" content="749">
+<meta itemprop="wordCount" content="765">
 
 
 
@@ -850,46 +850,48 @@ Steps will be detailed to help you.</p>
 <li>Set the service tag and port to <code>web</code></li>
 </ul></li>
 <li>Commit and push your changes</li>
+<li>Add the following file, named <code>.gitlab-ci.yml</code> to your repository: (do not forget to change <code>$VMID</code>)</li>
+</ul>
 
-<li><p>Add the following file to your repository: (do not forget to change <code>$VMID</code>)</p>
+<p>Note: you must see this file in raw format <a href="https://raw.githubusercontent.com/henyxia/henyxia.github.com/source/content/scholar/GIS4-2020/15-tutorials.md">here</a> to have correct indentation.</p>
 
 <pre><code>variables:
-NOMAD_ADDR: http://10.99.99.96:4646
-docker_registry: 10.99.99.97:5000
-docker_image: web-$VMID
+  NOMAD_ADDR: http://10.99.99.96:4646
+  docker_registry: 10.99.99.97:5000
+  docker_image: web-$VMID
 
 stages:
-- build
-- deploy
+  - build
+  - deploy
 
 build:
-stage: build
-image: docker
-tags:
-- docker
-script:
-- tag=${docker_registry}/${docker_image}:${CI_COMMIT_SHORT_SHA}
-- echo &quot;building and pushing tag $tag&quot;
-- docker build -t ${tag} -f Dockerfile .
-- docker push ${tag}
+  stage: build
+  image: docker
+  tags:
+    - docker
+  script:
+    - tag=${docker_registry}/${docker_image}:${CI_COMMIT_SHORT_SHA}
+    - echo &quot;building and pushing tag $tag&quot;
+    - docker build -t ${tag} -f Dockerfile .
+    - docker push ${tag}
 
 deploy:
-stage: deploy
-image: hendrikmaus/nomad-cli
-tags:
-- docker
-script:
-- apk add gettext
-- envsubst '${CI_COMMIT_SHORT_SHA}' &lt; project.nomad &gt; job.nomad
-- cat job.nomad
-- nomad validate job.nomad
-- nomad plan job.nomad || if [ $? -eq 255 ]; then exit 255; else echo &quot;success&quot;; fi
-- nomad run job.nomad
-</code></pre></li>
+  stage: deploy
+  image: hendrikmaus/nomad-cli
+  tags:
+    - docker
+  script:
+    - apk add gettext
+    - envsubst '${CI_COMMIT_SHORT_SHA}' &lt; project.nomad &gt; job.nomad
+    - cat job.nomad
+    - nomad validate job.nomad
+    - nomad plan job.nomad || if [ $? -eq 255 ]; then exit 255; else echo &quot;success&quot;; fi
+    - nomad run job.nomad
+</code></pre>
 
-<li><p>You can check the deployment on your Gitlab repo (ex: <code>https://gitlab.gis-virt.fr/gis2020/grp3team01/-/jobs</code>)</p></li>
-
-<li><p>Once deployed, you will see your job running on the common Nomad: <a href="http://10.99.99.96:4646/ui/jobs">http://10.99.99.96:4646/ui/jobs</a></p></li>
+<ul>
+<li>You can check the deployment on your Gitlab repo (ex: <code>https://gitlab.gis-virt.fr/gis2020/grp3team01/-/jobs</code>)</li>
+<li>Once deployed, you will see your job running on the common Nomad: <a href="http://10.99.99.96:4646/ui/jobs">http://10.99.99.96:4646/ui/jobs</a></li>
 </ul>
 
 <h1 id="tutorial-13">Tutorial 13</h1>
