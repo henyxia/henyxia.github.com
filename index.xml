@@ -331,6 +331,16 @@ modprobe ipmi_devintf modprobe ipmi_si  Source: serverfault</description>
     </item>
     
     <item>
+      <title>Sentry tips</title>
+      <link>https://henyxia.github.io/notes/sentry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henyxia.github.io/notes/sentry/</guid>
+      <description>Sentry is an awesome tool when it comes to retrieve all issues of a given software. Unfortunately, the actual UI does not show properly issue severity. The following CSS can be added (with Stylus for example) in order to make it visual.
+div#blk_router div.app &amp;gt; div.container div.ref-group-list &amp;gt; div * { z-index: 10 !important; } div#blk_router div.app &amp;gt; div.container div.ref-group-list &amp;gt; div { position: relative; } div#blk_router div.app &amp;gt; div.container div.</description>
+    </item>
+    
+    <item>
       <title>Managing soft RAID</title>
       <link>https://henyxia.github.io/notes/raid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

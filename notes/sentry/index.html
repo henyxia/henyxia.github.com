@@ -2,7 +2,7 @@
 <html><head>
   <title>
       
-          Managing soft RAID - henyxia&#39;s website
+          Sentry tips - henyxia&#39;s website
       
   </title>
   <meta charset="utf-8">
@@ -16,24 +16,27 @@
   <link rel="stylesheet" href="https://henyxia.github.io/css/style-pulse.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <meta property="og:title" content="Managing soft RAID" />
-<meta property="og:description" content=" Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  " />
+  <meta property="og:title" content="Sentry tips" />
+<meta property="og:description" content="Sentry is an awesome tool when it comes to retrieve all issues of a given software. Unfortunately, the actual UI does not show properly issue severity. The following CSS can be added (with Stylus for example) in order to make it visual.
+div#blk_router div.app &gt; div.container div.ref-group-list &gt; div * { z-index: 10 !important; } div#blk_router div.app &gt; div.container div.ref-group-list &gt; div { position: relative; } div#blk_router div.app &gt; div.container div." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://henyxia.github.io/notes/raid/" />
+<meta property="og:url" content="https://henyxia.github.io/notes/sentry/" />
 
-<meta itemprop="name" content="Managing soft RAID">
-<meta itemprop="description" content=" Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  ">
+<meta itemprop="name" content="Sentry tips">
+<meta itemprop="description" content="Sentry is an awesome tool when it comes to retrieve all issues of a given software. Unfortunately, the actual UI does not show properly issue severity. The following CSS can be added (with Stylus for example) in order to make it visual.
+div#blk_router div.app &gt; div.container div.ref-group-list &gt; div * { z-index: 10 !important; } div#blk_router div.app &gt; div.container div.ref-group-list &gt; div { position: relative; } div#blk_router div.app &gt; div.container div.">
 
 
 
-<meta itemprop="wordCount" content="71">
+<meta itemprop="wordCount" content="198">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Managing soft RAID"/>
-<meta name="twitter:description" content=" Create array mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY  Delete array mdadm --stop /dev/mdX mdadm --zero-superblock /dev/sdX mdadm --zero-superblock /dev/sdY  Add disk to array mdadm /dev/mdX --add /dev/sdX  Set disk as faulty mdadm /dev/mdX --fail /dev/sdX  Remove disk in array mdadm /dev/mdX --remove /dev/sdX  Change disk quantity in array mdadm --grow /dev/mdX --raid-devices=X  Switch to RW mdadm --readwrite /dev/mdX  Show details of array mdadm --detail /dev/md0  Show arrays status cat /proc/mdstat  "/>
+<meta name="twitter:title" content="Sentry tips"/>
+<meta name="twitter:description" content="Sentry is an awesome tool when it comes to retrieve all issues of a given software. Unfortunately, the actual UI does not show properly issue severity. The following CSS can be added (with Stylus for example) in order to make it visual.
+div#blk_router div.app &gt; div.container div.ref-group-list &gt; div * { z-index: 10 !important; } div#blk_router div.app &gt; div.container div.ref-group-list &gt; div { position: relative; } div#blk_router div.app &gt; div.container div."/>
 
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -71,7 +74,7 @@ if (!doNotTrack) {
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item" href="https://bulma.io/">
-        Managing soft RAID
+        Sentry tips
       </div>
     </div>
   </div>
@@ -232,7 +235,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="">
+      <li class="active">
         
         <a href="https://henyxia.github.io/notes/sentry/">Sentry</a>
         
@@ -245,7 +248,7 @@ if (!doNotTrack) {
   
   
     
-      <li class="active">
+      <li class="">
         
         <a href="https://henyxia.github.io/notes/raid/">Soft RAID</a>
         
@@ -698,54 +701,39 @@ if (!doNotTrack) {
       <div class="content">
         <div class="content">
           
-	  
+	  <p>Sentry is an awesome tool when it comes to retrieve all issues of a given
+software. Unfortunately, the actual UI does not show properly issue severity.
+The following CSS can be added (with Stylus for example) in order to make it
+visual.</p>
 
-<h2 id="create-array">Create array</h2>
-
-<pre><code>mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY
+<pre><code>div#blk_router div.app &gt; div.container div.ref-group-list &gt; div * {
+    z-index: 10 !important;
+}
+div#blk_router div.app &gt; div.container div.ref-group-list &gt; div {
+    position: relative;
+}
+div#blk_router div.app &gt; div.container div.ref-group-list &gt; div &gt; div:first-child {
+    z-index: 99 !important;
+}
+div#blk_router div.app &gt; div.container div.event-issue-header a &gt; div.tip[title][data-original-title] {
+    display: inline !important;;
+    background-color: white !important;
+    opacity: 20%;
+    top: 0px !important;
+    left: 0px !important;
+    border: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1 !important;
+}
+div#blk_router div.app &gt; div.container div.event-issue-header a &gt; div.tip[title][data-original-title=&quot;Error level: Debug&quot;] { background-color: cyan !important; }
+div#blk_router div.app &gt; div.container div.event-issue-header a &gt; div.tip[title][data-original-title=&quot;Error level: Info&quot;] { background-color: green !important; }
+div#blk_router div.app &gt; div.container div.event-issue-header a &gt; div.tip[title][data-original-title=&quot;Error level: Warning&quot;] { background-color: yellow !important; }
+div#blk_router div.app &gt; div.container div.event-issue-header a &gt; div.tip[title][data-original-title=&quot;Error level: Error&quot;] { background-color: orange !important; }
+div#blk_router div.app &gt; div.container div.event-issue-header a &gt; div.tip[title][data-original-title=&quot;Error level: Fatal&quot;] { background-color: red !important; }
 </code></pre>
 
-<h2 id="delete-array">Delete array</h2>
-
-<pre><code>mdadm --stop /dev/mdX
-mdadm --zero-superblock /dev/sdX
-mdadm --zero-superblock /dev/sdY
-</code></pre>
-
-<h2 id="add-disk-to-array">Add disk to array</h2>
-
-<pre><code>mdadm /dev/mdX --add /dev/sdX
-</code></pre>
-
-<h2 id="set-disk-as-faulty">Set disk as faulty</h2>
-
-<pre><code>mdadm /dev/mdX --fail /dev/sdX
-</code></pre>
-
-<h2 id="remove-disk-in-array">Remove disk in array</h2>
-
-<pre><code>mdadm /dev/mdX --remove /dev/sdX
-</code></pre>
-
-<h2 id="change-disk-quantity-in-array">Change disk quantity in array</h2>
-
-<pre><code>mdadm --grow /dev/mdX --raid-devices=X
-</code></pre>
-
-<h2 id="switch-to-rw">Switch to RW</h2>
-
-<pre><code>mdadm --readwrite /dev/mdX
-</code></pre>
-
-<h2 id="show-details-of-array">Show details of array</h2>
-
-<pre><code>mdadm --detail /dev/md0
-</code></pre>
-
-<h2 id="show-arrays-status">Show arrays status</h2>
-
-<pre><code>cat /proc/mdstat
-</code></pre>
+<p>This script was originally written by <a href="https://github.com/folays">@folays</a>.</p>
 
         </div>
       </div>
