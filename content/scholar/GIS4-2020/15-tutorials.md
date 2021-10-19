@@ -106,7 +106,7 @@ Tutorial 9
 ### 1 point
 
 * Add a route on your computer (the zabeth) to access the virtual machines directly
-* Network to add is `10.0..0.0/8`
+* Network to add is `10.0.0.0/8`
 * Hop to use is `172.26.145.250`
 
 Tutorial 10
