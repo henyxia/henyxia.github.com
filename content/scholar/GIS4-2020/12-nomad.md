@@ -64,24 +64,24 @@ job "my-website" {
       delay = "30s"
       mode = "fail"
     }
+    
+    network {
+      port "web" {
+        to = 8080
+      }
+    }
 
     task "nginx" {
       driver = "docker"
 
       config {
         image = "registry-host:5000/myteam/my-image"
-        port_map {
-          web = 8080
-        }
+        ports = ["web"]
       }
 
       resources {
         cpu    = 500
         memory = 1024
-        network {
-          mbits = 100
-          port "web" {}
-        }
       }
 
       service {
